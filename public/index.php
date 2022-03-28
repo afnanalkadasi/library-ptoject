@@ -11,7 +11,9 @@ use coding\app\controllers\BooksController;
 use coding\app\controllers\CityController;
 use coding\app\controllers\OfferController;
 use coding\app\controllers\OrderController;
-
+use coding\app\controllers\orderdetailsController;
+use coding\app\controllers\payementController;
+use coding\app\controllers\useraddressController;
 use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(dirname(__DIR__));//createImmutable(__DIR__);
@@ -70,5 +72,17 @@ Router::get('/app-offer-list',[OfferController::class,'offer']);
 Router::get('/add_order',[OrderController::class,'add_order']);
 Router::get('/edit_order',[OrderController::class,'editorder']);
 Router::get('/app-order-list',[OrderController::class,'order']);
+////////////////////////////order_details///////////
+Router::get('/add_orderdetails',[orderdetailsController::class,'add_orderdetails']);
+Router::get('/edit_orderdetails',[orderdetailsController::class,'editorderdetails']);
+Router::get('/app-orderdetails-list',[orderdetailsController::class,'orderdetails']);
+////////////////////////////payements///////////
+Router::get('/add_payements',[payementController::class,'add_payements']);
+Router::get('/edit_payements',[payementController::class,'editpayements']);
+Router::get('/app-payements-list',[payementController::class,'payements']);
+////////////////////////////user_addresses///////////
+Router::get('/add_useraddress',[useraddressController::class,'add_useraddress']);
+Router::get('/edit_useraddress',[useraddressController::class,'edituseraddress']);
+Router::get('/app-useraddress-list',[useraddressController::class,'useraddress']);
 $system->start();
 
