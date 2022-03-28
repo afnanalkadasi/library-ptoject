@@ -3,19 +3,19 @@
 
                 <div class="mySlides fade">
               
-                  <img src="app/public/img/slider_img.webp" style="width:100%">
+                  <img src="img/slider_img.webp" style="width:100%">
                   
                 </div>
                 
                 <div class="mySlides fade">
           
-                  <img src="app/public/img/slider_img2.webp" style="width:100%">
+                  <img src="img/slider_img2.webp" style="width:100%">
                  
                 </div>
                 
                 <div class="mySlides fade">
                 
-                  <img src="app/public/img/slider_img3.jpg" style="width:100%">
+                  <img src="img/slider_img3.jpg" style="width:100%">
                  
                 </div>
                 

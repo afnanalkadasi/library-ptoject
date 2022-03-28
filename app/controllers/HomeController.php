@@ -1,8 +1,8 @@
 <?php
+namespace coding\app\controllers;
 
-namespace App\Controllers;
 
-use App\Controllers\Controller;
+use coding\app\controllers\Controller;
 
 class HomeController extends Controller
 {
@@ -32,12 +32,16 @@ class HomeController extends Controller
     {
         $this->view('checkout');
     }
-    // public function login()
-    // {
-    //     $this->view('login');
-    // }
-    // public function sign_up()
-    // {
-    //     $this->view('sign_up');
-    // }
+    public function dashboard()
+    {
+        $this->view('dashboards-ecommerce');
+    }
+    public function login()
+    {
+        $this->view('login');
+    }
+    public function sign_up()
+    {
+        $this->view('sign_up');
+    }
 }

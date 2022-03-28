@@ -1,8 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- head -->
+ <?php include "head.php"; ?> 
+<body dir="rtl" class="grid-container" id="index">
+ <?php include "header.php"; ?>
+    <main>
+ <!-- login -->
+
 <section>
             
             
-            <div id="idlog" class="modal">
-            <span  onclick="document.getElementById('idlog').style.display='none' " class="close2" title="Close Modal">&times;</span>
+            <div id="" class="">
+            <!-- <span  onclick="document.getElementById('idlog').style.display='none' " class="close2" title="Close Modal">&times;</span> -->
             <form class="modal-content animate" action="#" method="post">
                 <div class="textcontainer">
                           <h2>تسجيل الدخول</h2>
@@ -20,10 +29,16 @@
             </div>
             <div class="container2">
             <p>ليس لديك  حساب؟</p>
-            <button class="login_btn2" onclick="document.getElementById('id11').style.display='block'" > إنشاء حساب جديد </button>
+            <a class="login_btn2" href="/sign_up"> إنشاء حساب جديد </a>
             
             </div>
             </form>
             
             </div>       
             </section>
+</main>
+<script src="js/slide.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cate.js"></script>
+</body>
+</html>

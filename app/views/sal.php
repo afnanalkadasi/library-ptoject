@@ -7,9 +7,8 @@
 <?php include "header.php"; ?>
     <main>
  <!-- login -->
- <?php include "login.php"; ?>
          <!-- sign up -->
-<?php include "sign_up.php"; ?>
+
 <!-- //slider image -->
                <div id="sal" >
                         <div class="modal-content_card">    
@@ -169,7 +168,7 @@
                 </div>
 </main>
 <?php include "footer.php"; ?>
-<script src="app/public/js/main.js"></script>
+<script src="js/main.js"></script>
  
 </body>
 

@@ -2,7 +2,7 @@
 <html lang="en">
  <!-- head -->
  <?php include "head.php"; ?> 
-    <link rel="stylesheet" href="app/public/css/check_style.css" />
+    <link rel="stylesheet" href="css/check_style.css" />
    
     
     
@@ -10,9 +10,9 @@
   <?php include "header.php"; ?>
     <main>
  <!-- login -->
- <?php include "login.php"; ?>
+
          <!-- sign up -->
-<?php include "sign_up.php"; ?>
+
 
       <section>
     <form action="#" class="form">
@@ -44,7 +44,10 @@
           <input type="date" name="dob" id="dob" />
         </div>
         <div class="">
-          <a href="#" class="btn btn-next width-50 ml-auto">التالي</a>
+          <a class="btn btn-next width-50 ml-auto">التالي</a>
+          <script>
+              console.log(' click next ');
+          </script>
         </div>
       </div>
       <div class="form-step">
@@ -92,8 +95,9 @@
     </section>
  </main>
  <?php include "footer.php"; ?>
- <script src="app/public/js/slide.js"></script>
-<script src="app/public/js/main.js"></script>
-<script src="app/public/js/cate.js"></script>
+ <script src="js/slide.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cate.js"></script>
+<script src="js/script.js"></script>
   </body>
 </html>

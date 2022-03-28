@@ -1,17 +1,7 @@
 <?php
-
-namespace App\System;
+namespace coding\app\system;
 
 class Response{
-
-
-
-
-  
-
-
-        
-    
 
 }
 ?>

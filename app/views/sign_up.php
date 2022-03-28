@@ -1,6 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- head -->
+ <?php include "head.php"; ?> 
+<body dir="rtl" class="grid-container" id="index">
+ <?php include "header.php"; ?>
+    <main>
 <section>
-                <div id="id11" class="modal">
-                                <span onclick="document.getElementById('id11').style.display='none'" class="close3" title="Close Modal">&times;</span>
+                <div id="" class="">
                                 <form class="modal-content" action="#">
                                   <div class="container">
                                                 <div class="textcontainer">
@@ -9,7 +15,7 @@
                                                  </div>
                                 <input type="tel" placeholder="رقم الجوال" name="number" required>
                                 <select id="country" name="country" aria-placeholder="رمز البلاد">
-                                                <img src="app/public/svg/svgexport-12.svg"> <option dir="rtl"  value="australia">+970</option>
+                                                <img src="svg/svgexport-12.svg"> <option dir="rtl"  value="australia">+970</option>
                                 </select>
 <br>
                                 <a>سوف نرسل لك <b>رمز التحقق  عن طريق رسالة نصية</b></a>       
@@ -31,7 +37,7 @@
                                     <div class="container2">
                                     <p>لديك حساب؟ 
                                             <!-- <a  style="color: blue; cursor: pointer;" onclick="document.getElementById('idlog').style.display='block'" >تسجيل الدخول<img src="svg/svgexport-17.svg"> </a> -->
-                                            <span onclick="document.getElementById('id11').style.display='none'" style="color: blue; cursor: pointer;" >تسجيل الدخول<img src="app/public/svg/svgexport-17.svg"></span>
+                                            <a  href="/login" style="color: blue; cursor: pointer;" >تسجيل الدخول<img src="svg/svgexport-17.svg"></a>
 
                                      </p>
                                      </div>
@@ -39,3 +45,9 @@
                                 </form>
                               </div>              
                     </section>
+      
+<script src="js/slide.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cate.js"></script>
+</body>
+</html>
