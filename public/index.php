@@ -10,6 +10,7 @@ use coding\app\controllers\PublishersController;
 use coding\app\controllers\BooksController;
 use coding\app\controllers\CityController;
 use coding\app\controllers\OfferController;
+use coding\app\controllers\OrderController;
 
 use Dotenv\Dotenv;
 
@@ -65,5 +66,9 @@ Router::get('/app-city-list',[CityController::class,'city']);
 Router::get('/add_offer',[OfferController::class,'add_offer']);
 Router::get('/edit_offer',[OfferController::class,'editoffer']);
 Router::get('/app-offer-list',[OfferController::class,'offer']);
+////////////////////////////orders///////////
+Router::get('/add_order',[OrderController::class,'add_order']);
+Router::get('/edit_order',[OrderController::class,'editorder']);
+Router::get('/app-order-list',[OrderController::class,'order']);
 $system->start();
 
