@@ -7,6 +7,7 @@ use coding\app\controllers\HomeController;
 use coding\app\controllers\CategoryController;
 use coding\app\controllers\AuthorsController;
 use coding\app\controllers\PublishersController;
+use coding\app\controllers\BooksController;
 use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(dirname(__DIR__));//createImmutable(__DIR__);
@@ -49,5 +50,10 @@ Router::get('/app-author-list',[AuthorsController::class,'author']);
 Router::get('/add_publisher',[PublishersController::class,'add_publisher']);
 Router::get('/edit_publisher',[PublishersController::class,'editpublisher']);
 Router::get('/app-publisher-list',[PublishersController::class,'publisher']);
+ 
+////////////////////////////Publishers///////////
+Router::get('/add_book',[BooksController::class,'add_book']);
+Router::get('/edit_book',[BooksController::class,'editbook']);
+Router::get('/app-book-list',[BooksController::class,'book']);
 $system->start();
 
