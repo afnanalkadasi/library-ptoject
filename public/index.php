@@ -14,6 +14,7 @@ use coding\app\controllers\OrderController;
 use coding\app\controllers\orderdetailsController;
 use coding\app\controllers\payementController;
 use coding\app\controllers\useraddressController;
+use coding\app\controllers\user_pay_MController;
 use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(dirname(__DIR__));//createImmutable(__DIR__);
@@ -84,5 +85,9 @@ Router::get('/app-payements-list',[payementController::class,'payements']);
 Router::get('/add_useraddress',[useraddressController::class,'add_useraddress']);
 Router::get('/edit_useraddress',[useraddressController::class,'edituseraddress']);
 Router::get('/app-useraddress-list',[useraddressController::class,'useraddress']);
+////////////////////////////user_addresses///////////
+Router::get('/add_user_payment',[user_pay_MController::class,'add_user_payment']);
+Router::get('/edit_user_payment',[user_pay_MController::class,'edituser_payment']);
+Router::get('/app-user_payment-list',[user_pay_MController::class,'user_payment']);
 $system->start();
 
