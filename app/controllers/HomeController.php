@@ -44,4 +44,5 @@ class HomeController extends Controller
     {
         $this->view('sign_up');
     }
+    
 }
