@@ -45,6 +45,9 @@ Router::get('/app-category-list',[CategoryController::class,'category']);
 Router::get('/add_author',[AuthorsController::class,'add_author']);
 Router::get('/edit_author',[AuthorsController::class,'editauthor']);
 Router::get('/app-author-list',[AuthorsController::class,'author']);
-
+////////////////////////////Publishers///////////
+Router::get('/add_publisher',[PublishersController::class,'add_publisher']);
+Router::get('/edit_publisher',[PublishersController::class,'editpublisher']);
+Router::get('/app-publisher-list',[PublishersController::class,'publisher']);
 $system->start();
 
