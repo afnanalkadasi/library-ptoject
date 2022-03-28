@@ -9,7 +9,7 @@ use coding\app\controllers\AuthorsController;
 use coding\app\controllers\PublishersController;
 use coding\app\controllers\BooksController;
 use coding\app\controllers\CityController;
-
+use coding\app\controllers\OfferController;
 
 use Dotenv\Dotenv;
 
@@ -53,14 +53,17 @@ Router::get('/app-author-list',[AuthorsController::class,'author']);
 Router::get('/add_publisher',[PublishersController::class,'add_publisher']);
 Router::get('/edit_publisher',[PublishersController::class,'editpublisher']);
 Router::get('/app-publisher-list',[PublishersController::class,'publisher']);
- 
-////////////////////////////Publishers///////////
+////////////////////////////book///////////
 Router::get('/add_book',[BooksController::class,'add_book']);
 Router::get('/edit_book',[BooksController::class,'editbook']);
 Router::get('/app-book-list',[BooksController::class,'book']);
-////////////////////////////Publishers///////////
+////////////////////////////city///////////
 Router::get('/add_city',[CityController::class,'add_city']);
 Router::get('/edit_city',[CityController::class,'editcity']);
 Router::get('/app-city-list',[CityController::class,'city']);
+////////////////////////////Offers///////////
+Router::get('/add_offer',[OfferController::class,'add_offer']);
+Router::get('/edit_offer',[OfferController::class,'editoffer']);
+Router::get('/app-offer-list',[OfferController::class,'offer']);
 $system->start();
 
