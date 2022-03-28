@@ -41,5 +41,10 @@ Router::get('/save_author',[AuthorsController::class,'createAuthor']);
 Router::get('/add_category',[CategoryController::class,'add_category']);
 Router::get('/edit_category',[CategoryController::class,'editcategory']);
 Router::get('/app-category-list',[CategoryController::class,'category']);
+////////////////////////////Authors///////////
+Router::get('/add_author',[AuthorsController::class,'add_author']);
+Router::get('/edit_author',[AuthorsController::class,'editauthor']);
+Router::get('/app-author-list',[AuthorsController::class,'author']);
+
 $system->start();
 

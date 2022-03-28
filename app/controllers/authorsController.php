@@ -3,7 +3,7 @@ namespace coding\app\controllers;
 
 use coding\app\Models\AUthor;
 
-class AuthorsController{
+class AuthorsController extends Controller{
 
     public function createAuthor(){
         $author=new AUthor();
@@ -15,6 +15,16 @@ class AuthorsController{
         $author->is_active=1;
         $author->save();
     }
+    function add_author(){
+        $this->view('add_author');
+    }
+    function editauthor(){
+        $this->view('edit_author');
+    }
+    
+    function author(){
+        $this->view('app-author-list');
+    } 
 
 }
 ?>
