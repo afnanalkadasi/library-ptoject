@@ -8,7 +8,7 @@ class AuthorsController extends Controller{
         $this->view('add_author');
     }
     function listAll(){
-        $authors=new author();
+        $authors=new Author();
         $allauthors=$authors->getAll();
 
         $this->view('app-author-list',$allauthors);

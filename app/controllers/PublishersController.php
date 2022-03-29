@@ -10,14 +10,14 @@ class PublishersController extends Controller{
         $this->view('add_publisher');
     }
     function listAll(){
-        $publishers=new publisher();
+        $publishers=new Publisher();
         $allpublishers=$publishers->getAll();
         $this->view('app-publisher-list',$allpublishers);
     }
     function store(){
         print_r($_POST);
         print_r($_FILES);
-        $publisher=new publisher();
+        $publisher=new Publisher();
         
         $publisher->name=$_POST['name'];
         $publisher->phone=$_POST['phone'];
