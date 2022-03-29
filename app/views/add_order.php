@@ -391,7 +391,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  Order</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> اضافة طلب</h4>
 
 
 
@@ -401,11 +401,11 @@
   <form class="card-body" action="/save_user" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label" for="multicol-discount">total</label>
+        <label class="form-label" for="multicol-discount">الاجمالي</label>
         <input name="total" type="number" id="multicol-discount" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-discount">discount</label>
+        <label class="form-label" for="multicol-discount">الخصم</label>
         <input name="discount" type="number" id="multicol-discount" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
@@ -414,7 +414,7 @@
       </div>
       
       <div class="col-md-6 select2-primary">
-        <label class="form-label" for="multicol-language">user_id</label>
+        <label class="form-label" for="multicol-language">المستخدم</label>
         <select id="multicol-language" class="select2 form-select" >
           <option value="en" selected>English</option>
           <option value="fr" selected>French</option>
@@ -423,7 +423,7 @@
         </select>
       </div>
       <div class="col-md-6 select2-primary">
-        <label class="form-label" for="multicol-language">payment_method</label>
+        <label class="form-label" for="multicol-language">طريقة الدفع</label>
         <select id="multicol-language" class="select2 form-select" >
           <option value="en" selected>English</option>
           <option value="fr" selected>French</option>
@@ -432,7 +432,7 @@
         </select>
       </div>
       <div class="col-md-6 select2-primary">
-        <label class="form-label" for="multicol-language">address_id </label>
+        <label class="form-label" for="multicol-language">العنوان </label>
         <select id="multicol-language" class="select2 form-select" >
           <option value="en" selected>English</option>
           <option value="fr" selected>French</option>
@@ -444,7 +444,7 @@
 
       <div class="col-md-6">
         <div class="form-password-toggle">
-          <label class="form-label" for="multicol-confirm-password">Order status</label>
+          <label class="form-label" for="multicol-confirm-password">الحالة</label>
           <div class="input-group input-group-merge">
           <label class="switch">
               <input name="status" value=1 type="checkbox" checked class="switch-input" />
@@ -452,7 +452,7 @@
                 <span class="switch-on"></span>
                 <span class="switch-off"></span>
               </span>
-              <span class="switch-label">is active</span>
+              <span class="switch-label">مفعل</span>
             </label>
           </div>
         </div>

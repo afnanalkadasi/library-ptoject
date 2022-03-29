@@ -391,27 +391,31 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  CATEGORY</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> انشاء قسم جديد</h4>
 
 
 
 
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
-  <form class="card-body" action="/save_user" method="POST">
+  <form class="card-body" action="/save_category" method="POST" enctype="multipart/form-data">
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">Category name</label>
+        <label class="form-label" for="multicol-username">اسم القسم</label>
         <input name="name" type="text" id="multicol-username" class="form-control" placeholder="" />
       </div>
-     
+      
       <div class="col-md-6">
-          <label for="formFile" class="form-label">Image</label>
-          <input class="form-control" name="image" type="file" id="formFile">
+        <label class="form-label" for="multicol-email">صورة القسم</label>
+        <div class="input-group input-group-merge">
+          <input  name="image" type="file"  class="form-control"  aria-describedby="multicol-email2" />
+          
         </div>
-   <div class="col-md-6">
+      </div>
+      
+      <div class="col-md-6">
         <div class="form-password-toggle">
-          <label class="form-label" for="multicol-confirm-password">الحالة</label>
+          <label class="form-label" for="multicol-confirm-password">تفعيل القسم</label>
           <div class="input-group input-group-merge">
           <label class="switch">
               <input name="is_active" value=1 type="checkbox" checked class="switch-input" />
@@ -419,12 +423,13 @@
                 <span class="switch-on"></span>
                 <span class="switch-off"></span>
               </span>
-              <span class="switch-label"> مفعل </span>
-            </label>
+              <span class="switch-label">مفعل</span>
+          </label>
           </div>
         </div>
       </div>
     </div>
+    
     
     
     

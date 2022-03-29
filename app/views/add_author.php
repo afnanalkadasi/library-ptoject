@@ -429,8 +429,8 @@
         </div>
       </div>
       <div>
-          <label for="exampleFormControlTextarea1" class="form-label">Bio</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label for="exampleFormControlTextarea1" class="form-label">الوصف</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" name="bio" rows="3"></textarea>
         </div>
     </div>
     

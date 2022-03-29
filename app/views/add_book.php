@@ -391,7 +391,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  Book</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> اضافة كتاب</h4>
 
 
 
@@ -401,25 +401,25 @@
   <form class="card-body" action="/save_user" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">Book 	title</label>
+        <label class="form-label" for="multicol-username">عنوان الكتاب</label>
         <input name="title" type="text" id="multicol-username" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-          <label for="formFile" class="form-label">Image</label>
+          <label for="formFile" class="form-label">الصورة</label>
           <input class="form-control" name="image" type="file" id="formFile">
         </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-pages_number">pages_number</label>
+        <label class="form-label" for="multicol-pages_number">رقم الصفحات</label>
         <input name="pages_number" type="number" id="multicol-pages_number" class="form-control" placeholder="" />
       </div>
      
     
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">Book price</label>
+        <label class="form-label" for="multicol-username">سعر الكتاب</label>
         <input name="price" type="number" id="multicol-phone" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
-      <label class="form-label" for="multicol-email"> category_id</label>
+      <label class="form-label" for="multicol-email">  القسم</label>
                     <select name="category_id" class="form-select item-details mb-2">
                       <option selected disabled>Select Item</option>
                       <option value="App Design">App Design</option>
@@ -429,7 +429,7 @@
                     </select>
       </div>
       <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
-      <label class="form-label" for="multicol-email"> author_id</label>
+      <label class="form-label" for="multicol-email"> الكاتب</label>
                     <select name="author_id" class="form-select item-details mb-2">
                       <option selected disabled>Select Item</option>
                       <option value="App Design">App Design</option>
@@ -439,7 +439,7 @@
                     </select>
       </div>
       <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
-      <label class="form-label" for="multicol-email"> publisher_id</label>
+      <label class="form-label" for="multicol-email"> الناشر</label>
                     <select name="publisher_id" class="form-select item-details mb-2">
                       <option selected disabled>Select Item</option>
                       <option value="App Design">App Design</option>
@@ -449,11 +449,11 @@
                     </select>
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-country">Quantity</label>
+        <label class="form-label" for="multicol-country">الكمية</label>
         <input name="quantity" type="number" id="multicol-country" class="form-control" placeholder="" />
       </div>	
       <div class="col-md-6">
-        <label class="form-label" for="multicol-format">Format</label>
+        <label class="form-label" for="multicol-format">الصيغة</label>
         <input name="format" type="text" id="multicol-format" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
@@ -472,7 +472,7 @@
         </div>
       </div>
       <div>
-          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+          <label for="exampleFormControlTextarea1" class="form-label">الوصف</label>
           <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
     </div>

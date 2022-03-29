@@ -391,7 +391,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  Publisher</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> اضافة ناشر</h4>
 
 
 
@@ -401,30 +401,30 @@
   <form class="card-body" action="/save_user" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">publisher name</label>
+        <label class="form-label" for="multicol-username">اسم الناشر</label>
         <input name="name" type="text" id="multicol-username" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">publisher phone</label>
+        <label class="form-label" for="multicol-username">الهاتف</label>
         <input name="phone" type="tel" id="multicol-phone" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-phone">publisher ALT_phone</label>
+        <label class="form-label" for="multicol-phone"> ALTهاتف </label>
         <input name="alt_phone" type="tel" id="multicol-phone" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-fax">publisher fax</label>
+        <label class="form-label" for="multicol-fax">الناشر fax</label>
         <input name="fax" type="text" id="multicol-fax" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-email">Email</label>
+        <label class="form-label" for="multicol-email">الايميل</label>
         <div class="input-group input-group-merge">
           <input  name="email"type="text" id="multicol-email" class="form-control" placeholder="" aria-label="" aria-describedby="multicol-email2" />
           <span class="input-group-text" id="multicol-email2">@example.com</span>
         </div>
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-address">publisher address</label>
+        <label class="form-label" for="multicol-address">عنوان الناشر</label>
         <input name="address" type="text" id="multicol-address" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
@@ -432,7 +432,7 @@
         <input name="country" type="number" id="multicol-country" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-          <label for="formFile" class="form-label">Image</label>
+          <label for="formFile" class="form-label">الصورة</label>
           <input class="form-control" name="image" type="file" id="formFile">
         </div>
         <div class="col-md-6">
@@ -452,7 +452,7 @@
       </div>
     </div>
       <div>
-          <label for="exampleFormControlTextarea1" class="form-label">Bio</label>
+          <label for="exampleFormControlTextarea1" class="form-label">الوصف</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
     </div>

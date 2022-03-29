@@ -391,7 +391,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> EDIT CATEGORY</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  CATEGORY</h4>
 
 
 
@@ -401,15 +401,15 @@
   <form class="card-body" action="/save_user" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">Category name</label>
+        <label class="form-label" for="multicol-username">اسم القسم</label>
         <input name="name" type="text" id="multicol-username" class="form-control" placeholder="" />
       </div>
      
       <div class="col-md-6">
-          <label for="formFile" class="form-label">Default file input example</label>
-          <input class="form-control" type="file" id="formFile">
+          <label for="formFile" class="form-label">الصورة</label>
+          <input class="form-control" name="image" type="file" id="formFile">
         </div>
-        <div class="col-md-6">
+   <div class="col-md-6">
         <div class="form-password-toggle">
           <label class="form-label" for="multicol-confirm-password">الحالة</label>
           <div class="input-group input-group-merge">
@@ -425,7 +425,7 @@
         </div>
       </div>
     </div>
-    </div>
+    
     
     
     <div class="pt-4">

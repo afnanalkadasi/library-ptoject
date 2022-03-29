@@ -1,9 +1,5 @@
 <?php include "leftMenu.php"?>   
 
-<!-- / Menu -->
-
-    
-
     <!-- Layout container -->
     <div class="layout-page">
       
@@ -401,21 +397,22 @@
   <form class="card-body" action="/save_user" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">Authors name</label>
+        <label class="form-label" for="multicol-username"> اسم الكاتب</label>
         <input name="name" type="text" id="multicol-username" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">Authors phone</label>
+        <label class="form-label" for="multicol-username"> رقم الكاتب</label>
         <input name="phone" type="text" id="multicol-phone" class="form-control" placeholder="" />
       </div>
      
       <div class="col-md-6">
-        <label class="form-label" for="multicol-email">Email</label>
+        <label class="form-label" for="multicol-email">الايميل</label>
         <div class="input-group input-group-merge">
           <input  name="email"type="text" id="multicol-email" class="form-control" placeholder="" aria-label="" aria-describedby="multicol-email2" />
           <span class="input-group-text" id="multicol-email2">@example.com</span>
         </div>
       </div>
+    
       <div class="col-md-6">
         <div class="form-password-toggle">
           <label class="form-label" for="multicol-confirm-password">الحالة</label>
@@ -431,10 +428,9 @@
           </div>
         </div>
       </div>
-    </div>
       <div>
-          <label for="exampleFormControlTextarea1" class="form-label">Bio</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label for="exampleFormControlTextarea1" class="form-label">الوصف</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" name="bio" rows="3"></textarea>
         </div>
     </div>
     
