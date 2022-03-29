@@ -76,9 +76,12 @@ Router::get('/add_book',[BooksController::class,'add_book']);
 Router::get('/edit_book',[BooksController::class,'editbook']);
 Router::get('/app-book-list',[BooksController::class,'book']);
 ////////////////////////////city///////////
+Router::get('/city',[CityController::class,'listAll']);
 Router::get('/add_city',[CityController::class,'add_city']);
 Router::get('/edit_city',[CityController::class,'editcity']);
-Router::get('/app-city-list',[CityController::class,'city']);
+Router::get('/remove_city',[CityController::class,'remove']);
+Router::post('/save_city',[CityController::class,'store']);
+Router::post('/update_city',[CityController::class,'update']);
 ////////////////////////////Offers///////////
 Router::get('/add_offer',[OfferController::class,'add_offer']);
 Router::get('/edit_offer',[OfferController::class,'editoffer']);

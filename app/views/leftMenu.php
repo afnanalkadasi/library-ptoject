@@ -282,12 +282,12 @@
     <ul class="menu-sub">
     <li class="menu-item">
         <a href="/add_city" class="menu-link">
-          <div data-i18n="اضفة مدينة"> اضافة مدينة</div>
+          <div data-i18n="اضافة مدينة"> اضافة مدينة</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="/app-city-list" class="menu-link">
+        <a href="/city" class="menu-link">
           <div data-i18n="عرض المدن">عرض المدن</div>
         </a>
       </li>
