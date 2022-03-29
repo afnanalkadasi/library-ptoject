@@ -391,7 +391,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  user payment method</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> اضافة طرق دفع المستخدم</h4>
 
 
 
@@ -402,7 +402,7 @@
     <div class="row g-3">
     
       <div class="col-md-6 select2-primary">
-        <label class="form-label" for="multicol-language">user_id</label>
+        <label class="form-label" for="multicol-language">المستخدم</label>
         <select id="multicol-language" class="select2 form-select" >
           <option value="en" selected>English</option>
           <option value="fr" selected>French</option>
@@ -411,7 +411,7 @@
         </select>
       </div>
       <div class="col-md-6 select2-primary">
-        <label class="form-label" for="multicol-language">payement_id </label>
+        <label class="form-label" for="multicol-language">الدفع </label>
         <select id="multicol-language" class="select2 form-select" >
           <option value="en" selected>English</option>
           <option value="fr" selected>French</option>

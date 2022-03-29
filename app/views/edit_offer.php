@@ -401,25 +401,25 @@
   <form class="card-body" action="/save_user" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">offer title</label>
+        <label class="form-label" for="multicol-username">عنوان العرض</label>
         <input name="title" type="text" id="multicol-username" class="form-control" placeholder="" />
       </div>
      
       <div class="col-md-6">
-        <label class="form-label" for="multicol-discount">discount</label>
+        <label class="form-label" for="multicol-discount">الخصم</label>
         <input name="discount" type="number" id="multicol-discount" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-birthdate"> start date</label>
+        <label class="form-label" for="multicol-birthdate"> تاريخ البداية</label>
         <input type="text" name="start_date" id="multicol-birthdate" class="form-control dob-picker" placeholder="YYYY-MM-DD" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-birthdate"> end date</label>
+        <label class="form-label" for="multicol-birthdate"> تاريخ النهاية</label>
         <input type="text" name="end_date" id="multicol-birthdate" class="form-control dob-picker" placeholder="YYYY-MM-DD" />
       </div>
      
       <div class="col-md-6 select2-primary">
-        <label class="form-label" for="multicol-language">book_ids</label>
+        <label class="form-label" for="multicol-language">الكتب</label>
         <select id="multicol-language" class="select2 form-select" multiple>
           <option value="en" selected>English</option>
           <option value="fr" selected>French</option>
@@ -428,7 +428,7 @@
         </select>
       </div>
       <div class="col-md-6 select2-primary">
-        <label class="form-label" for="multicol-language">category_ids</label>
+        <label class="form-label" for="multicol-language">الاقسام</label>
         <select id="multicol-language" class="select2 form-select" multiple>
           <option value="en" selected>English</option>
           <option value="fr" selected>French</option>
@@ -439,7 +439,7 @@
    
       <div class="col-md-6">
         <div class="form-password-toggle">
-          <label class="form-label" for="multicol-confirm-password">all_books</label>
+          <label class="form-label" for="multicol-confirm-password">كل الكتب</label>
           <div class="input-group input-group-merge">
           <label class="switch">
               <input name="all_books" value=1 type="checkbox" checked class="switch-input" />
@@ -447,13 +447,13 @@
                 <span class="switch-on"></span>
                 <span class="switch-off"></span>
               </span>
-              <span class="switch-label">all_books</span>
+              <span class="switch-label">كل الكتب</span>
             </label>
           </div>
         </div>
       </div>
 
-       <div class="col-md-6">
+ <div class="col-md-6">
         <div class="form-password-toggle">
           <label class="form-label" for="multicol-confirm-password">الحالة</label>
           <div class="input-group input-group-merge">
@@ -469,6 +469,7 @@
         </div>
       </div>
     </div>
+    
     </div>
     
     

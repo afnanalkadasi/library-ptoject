@@ -51,9 +51,13 @@ Router::post('/users',[UsersController::class,'show']);
 Router::post('/save_user',[UsersController::class,'saveUser']);
 Router::get('/save_author',[AuthorsController::class,'createAuthor']);
 ////////////////////////////category///////////
+Router::get('/categories',[CategoryController::class,'listAll']);
 Router::get('/add_category',[CategoryController::class,'add_category']);
 Router::get('/edit_category',[CategoryController::class,'editcategory']);
-Router::get('/app-category-list',[CategoryController::class,'category']);
+Router::get('/remove_category',[CategoryController::class,'remove']);
+Router::post('/save_category',[CategoryController::class,'store']);
+Router::post('/update_category',[CategoryController::class,'update']);
+
 ////////////////////////////Authors///////////
 Router::get('/add_author',[AuthorsController::class,'add_author']);
 Router::get('/edit_author',[AuthorsController::class,'editauthor']);

@@ -391,7 +391,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  user address</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> اضافة عناوين المستخدم</h4>
 
 
 
@@ -401,15 +401,15 @@
   <form class="card-body" action="/save_user" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label" for="multicol-discount">address</label>
+        <label class="form-label" for="multicol-discount">العنوان</label>
         <input name="address" type="text" id="multicol-discount" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-phone">phone</label>
+        <label class="form-label" for="multicol-phone">الهاتف</label>
         <input name="phone" type="tel" id="multicol-phone" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6 select2-primary">
-        <label class="form-label" for="multicol-language">user_id</label>
+        <label class="form-label" for="multicol-language">المستخدم</label>
         <select id="multicol-language" class="select2 form-select" >
           <option value="en" selected>English</option>
           <option value="fr" selected>French</option>
@@ -418,7 +418,7 @@
         </select>
       </div>
       <div class="col-md-6 select2-primary">
-        <label class="form-label" for="multicol-language">city_id </label>
+        <label class="form-label" for="multicol-language">المدينة </label>
         <select id="multicol-language" class="select2 form-select" >
           <option value="en" selected>English</option>
           <option value="fr" selected>French</option>
@@ -428,14 +428,13 @@
       </div>
     
       <div class="col-md-6">
-        <label class="form-label" for="multicol-discount">lng</label>
+        <label class="form-label" for="multicol-discount">خط الطول</label>
         <input name="lng" type="number" id="multicol-discount" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-discount">	lat</label>
+        <label class="form-label" for="multicol-discount">	خط العرض</label>
         <input name="lat" type="number" id="multicol-discount" class="form-control" placeholder="" />
       </div>
-    
       <div class="col-md-6">
         <div class="form-password-toggle">
           <label class="form-label" for="multicol-confirm-password">الحالة</label>

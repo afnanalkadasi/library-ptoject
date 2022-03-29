@@ -1,5 +1,5 @@
 <?php 
-namespace coding\app\Models;
+namespace coding\app\models;
 use coding\app\system\AppSystem;
 class Model{
     public static  $tblName;
@@ -28,10 +28,18 @@ class Model{
    
         $stmt=AppSystem::$appSystem->database->pdo->prepare($sql_query);
         if($stmt->execute())
-        return false;
+        return true;
         return false;
        // return true;
      //echo $sql_query;
+    }
+
+    public function getAll(){
+        $sql_query="select * from ".self::$tblName."";
+        $stmt=AppSystem::$appSystem->database->pdo->prepare($sql_query);
+        $stmt->execute();
+        return $stmt->fetchAll();
+
     }
 }
 ?>

@@ -190,7 +190,7 @@
       </li>
 
       <li class="menu-item">
-        <a href="/app-category-list" class="menu-link">
+        <a href="/categories" class="menu-link">
           <div data-i18n="عرض الاقسام">عرض الاقسام</div>
         </a>
       </li>

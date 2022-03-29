@@ -1,6 +1,6 @@
 <?php
 
-namespace coding\app\Models;
+namespace coding\app\models;
 
 class AUthor extends Model{
     function __construct()
