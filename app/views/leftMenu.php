@@ -209,7 +209,7 @@
         </a>
       </li>
       <li class="menu-item">
-        <a href="/app-author-list" class="menu-link">
+        <a href="/authors" class="menu-link">
           <div data-i18n="عرض الكاتب">عرض الكاتب</div>
         </a>
       </li>

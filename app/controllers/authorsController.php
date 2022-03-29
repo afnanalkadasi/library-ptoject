@@ -1,30 +1,44 @@
 <?php
 namespace coding\app\controllers;
 
-use coding\app\Models\AUthor;
+use coding\app\Models\Author;
 
 class AuthorsController extends Controller{
-
-    public function createAuthor(){
-        $author=new AUthor();
-        $author->name="ali";
-        $author->phone="77878788";
-        $author->bio="fafdasdfasdfas";
-        $author->email="auth@gmail.com";
-        $author->created_by=1;
-        $author->is_active=1;
-        $author->save();
-    }
     function add_author(){
         $this->view('add_author');
     }
-    function editauthor(){
+    function listAll(){
+        $authors=new author();
+        $allauthors=$authors->getAll();
+
+        $this->view('app-author-list',$allauthors);
+
+    }
+ 
+
+    function store(){
+        print_r($_POST);
+        print_r($_FILES);
+        $author=new Author();
+        
+        $author->name=$_POST['name'];
+        $author->phone=$_POST['phone'];
+        $author->bio=$_POST['bio'];
+        $author->email=$_POST['email'];
+        $author->created_by=1;
+        $author->is_active=$_POST['is_active'];
+
+        $author->save();
+
+    }
+    function edit(){
         $this->view('edit_author');
     }
-    
-    function author(){
-        $this->view('app-author-list');
-    } 
+    function update(){
 
+    }
+    public function remove(){
+
+    }
 }
 ?>
