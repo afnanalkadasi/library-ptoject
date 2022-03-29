@@ -59,9 +59,12 @@ Router::post('/save_category',[CategoryController::class,'store']);
 Router::post('/update_category',[CategoryController::class,'update']);
 
 ////////////////////////////Authors///////////
+Router::get('/authors',[AuthorsController::class,'listAll']);
 Router::get('/add_author',[AuthorsController::class,'add_author']);
 Router::get('/edit_author',[AuthorsController::class,'editauthor']);
-Router::get('/app-author-list',[AuthorsController::class,'author']);
+Router::get('/remove_author',[AuthorsController::class,'remove']);
+Router::post('/save_author',[AuthorsController::class,'store']);
+Router::post('/update_author',[AuthorsController::class,'update']);
 ////////////////////////////Publishers///////////
 Router::get('/add_publisher',[PublishersController::class,'add_publisher']);
 Router::get('/edit_publisher',[PublishersController::class,'editpublisher']);
