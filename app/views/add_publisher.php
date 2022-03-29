@@ -391,7 +391,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD USER</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  Publisher</h4>
 
 
 
@@ -401,8 +401,20 @@
   <form class="card-body" action="/save_user" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">Username</label>
+        <label class="form-label" for="multicol-username">publisher name</label>
         <input name="name" type="text" id="multicol-username" class="form-control" placeholder="" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="multicol-username">publisher phone</label>
+        <input name="phone" type="tel" id="multicol-phone" class="form-control" placeholder="" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="multicol-phone">publisher ALT_phone</label>
+        <input name="alt_phone" type="tel" id="multicol-phone" class="form-control" placeholder="" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="multicol-fax">publisher fax</label>
+        <input name="fax" type="text" id="multicol-fax" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
         <label class="form-label" for="multicol-email">Email</label>
@@ -411,26 +423,19 @@
           <span class="input-group-text" id="multicol-email2">@example.com</span>
         </div>
       </div>
-      <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
-      <label class="form-label" for="multicol-email">Role Name</label>
-                    <select class="form-select item-details mb-2">
-                      <option selected disabled>Select Item</option>
-                      <option value="App Design">App Design</option>
-                      <option value="App Customization">App Customization</option>
-                      <option value="ABC Template">ABC Template</option>
-                      <option value="App Development">App Development</option>
-                    </select>
+      <div class="col-md-6">
+        <label class="form-label" for="multicol-address">publisher address</label>
+        <input name="address" type="text" id="multicol-address" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <div class="form-password-toggle">
-          <label class="form-label" for="multicol-password">Password</label>
-          <div class="input-group input-group-merge">
-            <input  name="password" type="password" id="multicol-password" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="multicol-password2" />
-            <span class="input-group-text cursor-pointer" id="multicol-password2"><i class="bx bx-hide"></i></span>
-          </div>
+        <label class="form-label" for="multicol-country">البلاد</label>
+        <input name="country" type="number" id="multicol-country" class="form-control" placeholder="" />
+      </div>
+      <div class="col-md-6">
+          <label for="formFile" class="form-label">Image</label>
+          <input class="form-control" name="image" type="file" id="formFile">
         </div>
-      </div>
-      <div class="col-md-6">
+        <div class="col-md-6">
         <div class="form-password-toggle">
           <label class="form-label" for="multicol-confirm-password">الحالة</label>
           <div class="input-group input-group-merge">
@@ -446,6 +451,10 @@
         </div>
       </div>
     </div>
+      <div>
+          <label for="exampleFormControlTextarea1" class="form-label">Bio</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
     </div>
     
     
