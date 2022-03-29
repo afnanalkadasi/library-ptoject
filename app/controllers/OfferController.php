@@ -1,6 +1,7 @@
 <?php
 namespace coding\app\controllers;
 
+use coding\app\Models\Offer;
 
 
 class OfferController extends Controller{

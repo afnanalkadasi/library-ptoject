@@ -429,7 +429,7 @@
       </div>
       <div class="col-md-6">
         <label class="form-label" for="multicol-country">البلاد</label>
-        <input name="country" type="number" id="multicol-country" class="form-control" placeholder="" />
+        <input name="country" type="text" id="multicol-country" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
           <label for="formFile" class="form-label">الصورة</label>

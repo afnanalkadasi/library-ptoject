@@ -1,6 +1,7 @@
 <?php
 namespace coding\app\controllers;
 
+use coding\app\Models\Book;
 
 
 class BooksController extends Controller{

@@ -229,7 +229,7 @@
       </li>
 
       <li class="menu-item">
-        <a href="/app-publisher-list" class="menu-link">
+        <a href="/publishers" class="menu-link">
           <div data-i18n="عرض الناشرين">عرض الناشرين</div>
         </a>
       </li>

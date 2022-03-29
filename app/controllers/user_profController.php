@@ -1,6 +1,7 @@
 <?php
 namespace coding\app\controllers;
 
+use coding\app\Models\User_profile;
 
 
 class user_profController extends Controller{

@@ -1,6 +1,7 @@
 <?php
 namespace coding\app\controllers;
 
+use coding\app\Models\User_payment_method;
 
 
 class user_pay_MController extends Controller{

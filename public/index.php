@@ -49,7 +49,6 @@ Router::get('/app-user-list', [UsersController::class, 'users']);
 Router::get('/remove_user',[UsersController::class,'delete']);
 Router::post('/users',[UsersController::class,'show']);
 Router::post('/save_user',[UsersController::class,'saveUser']);
-Router::get('/save_author',[AuthorsController::class,'createAuthor']);
 ////////////////////////////category///////////
 Router::get('/categories',[CategoryController::class,'listAll']);
 Router::get('/add_category',[CategoryController::class,'add_category']);
@@ -66,9 +65,12 @@ Router::get('/remove_author',[AuthorsController::class,'remove']);
 Router::post('/save_author',[AuthorsController::class,'store']);
 Router::post('/update_author',[AuthorsController::class,'update']);
 ////////////////////////////Publishers///////////
+Router::get('/publishers',[PublishersController::class,'listAll']);
 Router::get('/add_publisher',[PublishersController::class,'add_publisher']);
 Router::get('/edit_publisher',[PublishersController::class,'editpublisher']);
-Router::get('/app-publisher-list',[PublishersController::class,'publisher']);
+Router::get('/remove_publisher',[PublishersController::class,'remove']);
+Router::post('/save_publisher',[PublishersController::class,'store']);
+Router::post('/update_publisher',[PublishersController::class,'update']);
 ////////////////////////////book///////////
 Router::get('/add_book',[BooksController::class,'add_book']);
 Router::get('/edit_book',[BooksController::class,'editbook']);

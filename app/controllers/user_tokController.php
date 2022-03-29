@@ -1,6 +1,7 @@
 <?php
 namespace coding\app\controllers;
 
+use coding\app\Models\User_token;
 
 
 class user_tokController extends Controller{
