@@ -1,6 +1,7 @@
 <?php
 namespace coding\app\controllers;
 
+use coding\app\Models\Order_details;
 
 
 class orderdetailsController extends Controller{
