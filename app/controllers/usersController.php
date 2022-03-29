@@ -9,7 +9,7 @@ class UsersController extends Controller{
    
         $this->view('index');
     }
-    function newUser(){
+    function create(){
         $this->view('new_user');
     }
     function editUser(){

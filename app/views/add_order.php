@@ -391,7 +391,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD USER</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  Order</h4>
 
 
 
@@ -401,51 +401,63 @@
   <form class="card-body" action="/save_user" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">Username</label>
-        <input name="name" type="text" id="multicol-username" class="form-control" placeholder="" />
+        <label class="form-label" for="multicol-discount">total</label>
+        <input name="total" type="number" id="multicol-discount" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-email">Email</label>
-        <div class="input-group input-group-merge">
-          <input  name="email"type="text" id="multicol-email" class="form-control" placeholder="" aria-label="" aria-describedby="multicol-email2" />
-          <span class="input-group-text" id="multicol-email2">@example.com</span>
-        </div>
+        <label class="form-label" for="multicol-discount">discount</label>
+        <input name="discount" type="number" id="multicol-discount" class="form-control" placeholder="" />
       </div>
-      <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
-      <label class="form-label" for="multicol-email">Role Name</label>
-                    <select class="form-select item-details mb-2">
-                      <option selected disabled>Select Item</option>
-                      <option value="App Design">App Design</option>
-                      <option value="App Customization">App Customization</option>
-                      <option value="ABC Template">ABC Template</option>
-                      <option value="App Development">App Development</option>
-                    </select>
+      <div class="col-md-6">
+        <label class="form-label" for="multicol-discount">net_total</label>
+        <input name="net_total" type="number" id="multicol-discount" class="form-control" placeholder="" />
       </div>
+      
+      <div class="col-md-6 select2-primary">
+        <label class="form-label" for="multicol-language">user_id</label>
+        <select id="multicol-language" class="select2 form-select" >
+          <option value="en" selected>English</option>
+          <option value="fr" selected>French</option>
+          <option value="de">German</option>
+          <option value="pt">Portuguese</option>
+        </select>
+      </div>
+      <div class="col-md-6 select2-primary">
+        <label class="form-label" for="multicol-language">payment_method</label>
+        <select id="multicol-language" class="select2 form-select" >
+          <option value="en" selected>English</option>
+          <option value="fr" selected>French</option>
+          <option value="de">German</option>
+          <option value="pt">Portuguese</option>
+        </select>
+      </div>
+      <div class="col-md-6 select2-primary">
+        <label class="form-label" for="multicol-language">address_id </label>
+        <select id="multicol-language" class="select2 form-select" >
+          <option value="en" selected>English</option>
+          <option value="fr" selected>French</option>
+          <option value="de">German</option>
+          <option value="pt">Portuguese</option>
+        </select>
+      </div>
+
+
       <div class="col-md-6">
         <div class="form-password-toggle">
-          <label class="form-label" for="multicol-password">Password</label>
-          <div class="input-group input-group-merge">
-            <input  name="password" type="password" id="multicol-password" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="multicol-password2" />
-            <span class="input-group-text cursor-pointer" id="multicol-password2"><i class="bx bx-hide"></i></span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-password-toggle">
-          <label class="form-label" for="multicol-confirm-password">الحالة</label>
+          <label class="form-label" for="multicol-confirm-password">Order status</label>
           <div class="input-group input-group-merge">
           <label class="switch">
-              <input name="is_active" value=1 type="checkbox" checked class="switch-input" />
+              <input name="status" value=1 type="checkbox" checked class="switch-input" />
               <span class="switch-toggle-slider">
                 <span class="switch-on"></span>
                 <span class="switch-off"></span>
               </span>
-              <span class="switch-label"> مفعل </span>
+              <span class="switch-label">is active</span>
             </label>
           </div>
         </div>
       </div>
-    </div>
+    
     </div>
     
     

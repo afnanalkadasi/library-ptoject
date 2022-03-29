@@ -15,6 +15,11 @@ use coding\app\controllers\orderdetailsController;
 use coding\app\controllers\payementController;
 use coding\app\controllers\useraddressController;
 use coding\app\controllers\user_pay_MController;
+use coding\app\controllers\user_profController;
+use coding\app\controllers\user_tokController;
+use coding\app\controllers\roleController;
+
+
 use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(dirname(__DIR__));//createImmutable(__DIR__);
@@ -38,7 +43,7 @@ Router::get('/login', [HomeController::class, 'login']);
 Router::get('/sign_up', [HomeController::class, 'sign_up']);
 Router::get('/dashboards-ecommerce', [HomeController::class, 'dashboard']);
 ////////////////////////////user///////////
-Router::get('/new_user',[UsersController::class,'newUser']);
+Router::get('/new_user',[UsersController::class,'create']);
 Router::get('/edit_user',[UsersController::class,'editUser']);
 Router::get('/app-user-list', [UsersController::class, 'users']);
 Router::get('/remove_user',[UsersController::class,'delete']);
@@ -89,5 +94,19 @@ Router::get('/app-useraddress-list',[useraddressController::class,'useraddress']
 Router::get('/add_user_payment',[user_pay_MController::class,'add_user_payment']);
 Router::get('/edit_user_payment',[user_pay_MController::class,'edituser_payment']);
 Router::get('/app-user_payment-list',[user_pay_MController::class,'user_payment']);
+////////////////////////////user_profiles///////////
+Router::get('/add_user_profile',[user_profController::class,'add_user_profile']);
+Router::get('/edit_user_profile',[user_profController::class,'edituser_profile']);
+Router::get('/app-user_profile-list',[user_profController::class,'user_profile']);
+////////////////////////////user_token///////////
+Router::get('/add_user_token',[user_tokController::class,'add_user_token']);
+Router::get('/edit_user_token',[user_tokController::class,'edituser_token']);
+Router::get('/app-user_token-list',[user_tokController::class,'user_token']);
+////////////////////////////role///////////
+Router::get('/add_role',[roleController::class,'add_role']);
+Router::get('/edit_role',[roleController::class,'editrole']);
+Router::get('/app-role-list',[roleController::class,'role']);
+
+
 $system->start();
 

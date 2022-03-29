@@ -391,7 +391,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD USER</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  Book</h4>
 
 
 
@@ -401,19 +401,46 @@
   <form class="card-body" action="/save_user" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
-        <label class="form-label" for="multicol-username">Username</label>
-        <input name="name" type="text" id="multicol-username" class="form-control" placeholder="" />
+        <label class="form-label" for="multicol-username">Book 	title</label>
+        <input name="title" type="text" id="multicol-username" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="multicol-email">Email</label>
-        <div class="input-group input-group-merge">
-          <input  name="email"type="text" id="multicol-email" class="form-control" placeholder="" aria-label="" aria-describedby="multicol-email2" />
-          <span class="input-group-text" id="multicol-email2">@example.com</span>
+          <label for="formFile" class="form-label">Image</label>
+          <input class="form-control" name="image" type="file" id="formFile">
         </div>
+      <div class="col-md-6">
+        <label class="form-label" for="multicol-pages_number">pages_number</label>
+        <input name="pages_number" type="number" id="multicol-pages_number" class="form-control" placeholder="" />
+      </div>
+     
+    
+      <div class="col-md-6">
+        <label class="form-label" for="multicol-username">Book price</label>
+        <input name="price" type="number" id="multicol-phone" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
-      <label class="form-label" for="multicol-email">Role Name</label>
-                    <select class="form-select item-details mb-2">
+      <label class="form-label" for="multicol-email"> category_id</label>
+                    <select name="category_id" class="form-select item-details mb-2">
+                      <option selected disabled>Select Item</option>
+                      <option value="App Design">App Design</option>
+                      <option value="App Customization">App Customization</option>
+                      <option value="ABC Template">ABC Template</option>
+                      <option value="App Development">App Development</option>
+                    </select>
+      </div>
+      <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
+      <label class="form-label" for="multicol-email"> author_id</label>
+                    <select name="author_id" class="form-select item-details mb-2">
+                      <option selected disabled>Select Item</option>
+                      <option value="App Design">App Design</option>
+                      <option value="App Customization">App Customization</option>
+                      <option value="ABC Template">ABC Template</option>
+                      <option value="App Development">App Development</option>
+                    </select>
+      </div>
+      <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
+      <label class="form-label" for="multicol-email"> publisher_id</label>
+                    <select name="publisher_id" class="form-select item-details mb-2">
                       <option selected disabled>Select Item</option>
                       <option value="App Design">App Design</option>
                       <option value="App Customization">App Customization</option>
@@ -422,13 +449,12 @@
                     </select>
       </div>
       <div class="col-md-6">
-        <div class="form-password-toggle">
-          <label class="form-label" for="multicol-password">Password</label>
-          <div class="input-group input-group-merge">
-            <input  name="password" type="password" id="multicol-password" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="multicol-password2" />
-            <span class="input-group-text cursor-pointer" id="multicol-password2"><i class="bx bx-hide"></i></span>
-          </div>
-        </div>
+        <label class="form-label" for="multicol-country">Quantity</label>
+        <input name="quantity" type="number" id="multicol-country" class="form-control" placeholder="" />
+      </div>	
+      <div class="col-md-6">
+        <label class="form-label" for="multicol-format">Format</label>
+        <input name="format" type="text" id="multicol-format" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
         <div class="form-password-toggle">
@@ -445,7 +471,10 @@
           </div>
         </div>
       </div>
-    </div>
+      <div>
+          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+          <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
     </div>
     
     
