@@ -1,3 +1,4 @@
+
 <?php include "leftMenu.php"?>   
 
 <!-- / Menu -->
@@ -391,14 +392,14 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  Offer</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> اضافة الدفع</h4>
 
 
 
 
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
-  <form class="card-body" action="/save_user" method="POST">
+  <form class="card-body" action="/save_offer" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="multicol-username">عنوان العرض</label>
@@ -407,8 +408,9 @@
      
       <div class="col-md-6">
         <label class="form-label" for="multicol-discount">الخصم</label>
-        <input name="discount" type="number" id="multicol-discount" class="form-control" placeholder="" />
+        <input name="discount" type="text" id="multicol-discount" class="form-control" placeholder="" />
       </div>
+      
       <div class="col-md-6">
         <label class="form-label" for="multicol-birthdate"> تاريخ البداية</label>
         <input type="text" name="start_date" id="multicol-birthdate" class="form-control dob-picker" placeholder="YYYY-MM-DD" />
@@ -417,43 +419,47 @@
         <label class="form-label" for="multicol-birthdate"> تاريخ النهاية</label>
         <input type="text" name="end_date" id="multicol-birthdate" class="form-control dob-picker" placeholder="YYYY-MM-DD" />
       </div>
-     
-      <div class="col-md-6 select2-primary">
-        <label class="form-label" for="multicol-language">الكتب</label>
-        <select id="multicol-language" class="select2 form-select" multiple>
-          <option value="en" selected>English</option>
-          <option value="fr" selected>French</option>
-          <option value="de">German</option>
-          <option value="pt">Portuguese</option>
-        </select>
-      </div>
+
       <div class="col-md-6 select2-primary">
         <label class="form-label" for="multicol-language">الاقسام</label>
-        <select id="multicol-language" class="select2 form-select" multiple>
-          <option value="en" selected>English</option>
-          <option value="fr" selected>French</option>
-          <option value="de">German</option>
-          <option value="pt">Portuguese</option>
-        </select>
-      </div>
-   
-      <div class="col-md-6">
-        <div class="form-password-toggle">
-          <label class="form-label" for="multicol-confirm-password">كل الكتب</label>
-          <div class="input-group input-group-merge">
-          <label class="switch">
-              <input name="all_books" value=1 type="checkbox" checked class="switch-input" />
-              <span class="switch-toggle-slider">
-                <span class="switch-on"></span>
-                <span class="switch-off"></span>
-              </span>
-              <span class="switch-label">كل الكتب</span>
-            </label>
-          </div>
-        </div>
-      </div>
+     
+        <select name="categories" class="form-select select2"  multiple>
+                    <?php
+                foreach($params['categories'] as $category){
+                 ?>
+    <option  value ='<?=$category['id']?>'><?=$category['name']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
+               
+                    </select>
+      </div>     
+      
+      <div class="col-md-6 select2-primary">
+        <label class="form-label" for="multicol-language">الكتب</label>
+     
+        <select name="books" class="form-select select2"  multiple>
+                    <?php
+                foreach($params['books'] as $book){
+                 ?>
+    <option  value ='<?=$book['id']?>'><?=$book['title']?></option>
+			       	
+		         	<?php
+                         }?>
+               
+                    </select>
+      </div>     
+    
 
- <div class="col-md-6">
+     <div class="form-check">
+              <input class="form-check-input" type="checkbox"  name="all_books" value=1 id="defaultCheck3" checked />
+              <label class="form-check-label" for="defaultCheck3">
+              كل الكتب
+              </label>
+            </div>
+
+    <div class="col-md-6">
         <div class="form-password-toggle">
           <label class="form-label" for="multicol-confirm-password">الحالة</label>
           <div class="input-group input-group-merge">
@@ -469,10 +475,7 @@
         </div>
       </div>
     </div>
-    
-    </div>
-    
-    
+
     <div class="pt-4">
       <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
       <button type="reset" class="btn btn-label-secondary">Cancel</button>
@@ -480,12 +483,26 @@
   </form>
 </div>
 
+   
+  
+                 
+                 
+           
+                     
+                          <img type="text" id="" class=" cvv-code-mask" maxlength="3" placeholder="654" />
+                   
+                  
+               
+                  
 
 
 
 
-            
-          </div>
+
+
+
+
+   
           <!-- / Content -->
 
           
@@ -506,7 +523,7 @@
     <div class="layout-overlay layout-menu-toggle"></div>
     
     
-    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <!-- Drag Target Area To SlideIn Menu On Smll Screens -->
     <div class="drag-target"></div>
     
   </div>
