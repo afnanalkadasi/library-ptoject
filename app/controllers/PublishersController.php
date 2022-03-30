@@ -31,8 +31,12 @@ class PublishersController extends Controller{
         $publisher->image=$imageName!=null?$imageName:"default.png";
         $publisher->created_by=1;
         $publisher->is_active=$_POST['is_active'];
-
-        $publisher->save();
+        
+        if($publisher->save())
+        
+        $this->view('feedback',['success'=>'data inserted successful']);
+        else 
+        $this->view('feedback',['danger'=>'can not add data']);
 
     }
     function edit(){

@@ -91,9 +91,9 @@ Router::get('/add_offer',[OfferController::class,'add_offer']);
 Router::get('/edit_offer',[OfferController::class,'editoffer']);
 Router::get('/app-offer-list',[OfferController::class,'offer']);
 ////////////////////////////orders///////////
+Router::get('/offers',[OrderController::class,'order']);
 Router::get('/add_order',[OrderController::class,'add_order']);
 Router::get('/edit_order',[OrderController::class,'editorder']);
-Router::get('/app-order-list',[OrderController::class,'order']);
 ////////////////////////////order_details///////////
 Router::get('/add_orderdetails',[orderdetailsController::class,'add_orderdetails']);
 Router::get('/edit_orderdetails',[orderdetailsController::class,'editorderdetails']);

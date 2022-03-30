@@ -31,7 +31,12 @@ class roleController extends Controller{
         $role->name=$_POST['name'];
         $role->is_active=$_POST['is_active'];
 
-        $role->save();
+      
+        if($role->save())
+        
+        $this->view('feedback',['success'=>'data inserted successful']);
+        else 
+        $this->view('feedback',['danger'=>'can not add data']);
 
     }
 

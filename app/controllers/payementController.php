@@ -32,7 +32,11 @@ class payementController extends Controller{
         $payement->created_by=1;
         $payement->is_active=$_POST['is_active'];
 
-        $payement->save();
+        if($payement->save())
+        
+        $this->view('feedback',['success'=>'data inserted successful']);
+        else 
+        $this->view('feedback',['danger'=>'can not add data']);
 
     }
     function edit(){
