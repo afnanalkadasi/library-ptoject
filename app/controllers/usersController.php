@@ -36,6 +36,7 @@ class UsersController extends Controller{
         $user->password=md5($_POST['password']);
         $user->is_active=$_POST['is_active'];
         $user->role_id=$_POST['roles'];
+        
         if($user->save())
         
         $this->view('feedback',['success'=>'data inserted successful']);

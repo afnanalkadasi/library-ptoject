@@ -29,7 +29,12 @@ class CityController extends Controller{
         $city->created_by=1;
         $city->is_active=$_POST['is_active'];
 
-        $city->save();
+
+        if($city->save())
+        
+        $this->view('feedback',['success'=>'data inserted successful']);
+        else 
+        $this->view('feedback',['danger'=>'can not add data']);
 
     }
     function edit(){

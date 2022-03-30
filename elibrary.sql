@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2022 at 11:19 AM
+-- Generation Time: Mar 30, 2022 at 02:25 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -33,11 +33,19 @@ CREATE TABLE `authors` (
   `phone` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `bio` text DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp(),
   `created_by` int(5) NOT NULL,
   `is_active` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `authors`
+--
+
+INSERT INTO `authors` (`id`, `name`, `phone`, `email`, `bio`, `created_at`, `updated_at`, `created_by`, `is_active`) VALUES
+(3, 'afnan', '777645329', 'afnanalkadasi22@gmail.com', 'ffffffffffffffffffdsfasfagabghbgb', '2022-03-29 17:44:37', '2022-03-29 17:44:37', 1, 1),
+(4, 'احمد', '777699929', 'ahmad@gmail.com', 'fffffffffffffglkdjgdlfvdflvfffffdsfasfagabghbgb', '2022-03-29 17:45:37', '2022-03-29 17:45:37', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -72,12 +80,25 @@ CREATE TABLE `books` (
 CREATE TABLE `categories` (
   `id` int(2) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `image` varchar(255) DEFAULT NULL,
+  `image` varchar(255) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `upated_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `created_by` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`, `image`, `is_active`, `created_at`, `upated_at`, `created_by`) VALUES
+(9, 'دين', '6243646e282d0.svg', 1, '2022-03-29 19:56:30', '2022-03-29 19:56:30', 1),
+(10, 'تاريخ', '624364a173b37.svg', 1, '2022-03-29 19:57:21', '2022-03-29 19:57:21', 1),
+(11, 'روايات', '624364bc41524.svg', 1, '2022-03-29 19:57:48', '2022-03-29 19:57:48', 1),
+(12, 'سياسة', '624364e14b42a.svg', 1, '2022-03-29 19:58:25', '2022-03-29 19:58:25', 1),
+(13, 'اقتصاد', '6243650186c14.svg', 1, '2022-03-29 19:58:57', '2022-03-29 19:58:57', 1),
+(14, 'طبخ', '6243651f0dd60.svg', 1, '2022-03-29 19:59:27', '2022-03-29 19:59:27', 1),
+(15, 'تربية', '624365372f465.svg', 1, '2022-03-29 19:59:51', '2022-03-29 19:59:51', 1);
 
 -- --------------------------------------------------------
 
@@ -93,6 +114,14 @@ CREATE TABLE `cities` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `created_by` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cities`
+--
+
+INSERT INTO `cities` (`id`, `name`, `is_active`, `created_at`, `updated_at`, `created_by`) VALUES
+(1, 'تعز', 1, '2022-03-29 18:39:30', '2022-03-29 18:39:30', 1),
+(2, 'صنعاء', 1, '2022-03-30 06:57:06', '2022-03-30 06:57:06', 1);
 
 -- --------------------------------------------------------
 
@@ -165,6 +194,13 @@ CREATE TABLE `payements` (
   `created_by` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `payements`
+--
+
+INSERT INTO `payements` (`id`, `name`, `image`, `is_active`, `created_at`, `updated_at`, `created_by`) VALUES
+(1, 'نقد', '624355fa41f43.png', 1, '2022-03-29 18:54:50', '2022-03-29 18:54:50', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -187,6 +223,13 @@ CREATE TABLE `publishers` (
   `created_by` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `publishers`
+--
+
+INSERT INTO `publishers` (`id`, `name`, `phone`, `alt_phone`, `fax`, `email`, `address`, `country`, `image`, `is_active`, `created_at`, `updated_at`, `created_by`) VALUES
+(1, 'afnan', '77745329', '24234234', '234rw', 'afnanalkadadasi22@gmail.com', 'dsfs', 'fdf', '62434dc43cfd7.png', 1, '2022-03-29 18:19:48', '2022-03-29 18:19:48', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -197,9 +240,16 @@ CREATE TABLE `roles` (
   `id` int(2) NOT NULL,
   `name` varchar(255) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `name`, `is_active`, `created_at`, `updated_at`) VALUES
+(4, 'مستخدم', 1, '2022-03-29 19:24:52', '2022-03-29 19:24:52');
 
 -- --------------------------------------------------------
 
@@ -214,9 +264,21 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
   `role_id` int(1) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `is_active`, `role_id`, `created_at`, `updated_at`) VALUES
+(12, 'afnan', 'afnanalkadasi22@gmail.com', '1234', 1, 4, '2022-03-30 10:46:36', '2022-03-30 10:46:36'),
+(13, 'amal', 'amal@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1, 4, '2022-03-30 11:02:04', '2022-03-30 11:02:04'),
+(14, 'amal', 'amal@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1, 4, '2022-03-30 11:02:04', '2022-03-30 11:02:04'),
+(15, 'afnan', 'afnanalkadasi22@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 1, 4, '2022-03-30 11:02:54', '2022-03-30 11:02:54'),
+(16, 'afnan', 'afnanalkadasi22@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 1, 4, '2022-03-30 11:02:54', '2022-03-30 11:02:54'),
+(17, 'gg', 'gghghafnan2@gmail.com', '73c18c59a39b18382081ec00bb456d43', 1, 4, '2022-03-30 11:04:02', '2022-03-30 11:04:02');
 
 -- --------------------------------------------------------
 
@@ -399,7 +461,7 @@ ALTER TABLE `user_tokens`
 -- AUTO_INCREMENT for table `authors`
 --
 ALTER TABLE `authors`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `books`
@@ -411,13 +473,13 @@ ALTER TABLE `books`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `cities`
 --
 ALTER TABLE `cities`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `offers`
@@ -441,25 +503,25 @@ ALTER TABLE `order_details`
 -- AUTO_INCREMENT for table `payements`
 --
 ALTER TABLE `payements`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `publishers`
 --
 ALTER TABLE `publishers`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `user_addresses`
@@ -506,12 +568,6 @@ ALTER TABLE `orders`
 --
 ALTER TABLE `order_details`
   ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
-
---
--- Constraints for table `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `user_pforiles_pk_fk` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`);
 
 --
 -- Constraints for table `user_addresses`

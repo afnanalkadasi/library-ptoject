@@ -248,7 +248,7 @@
         </a>
       </li>
       <li class="menu-item">
-        <a href="/app-book-list" class="menu-link">
+        <a href="/books" class="menu-link">
           <div data-i18n="عرض الكتب">عرض الكتب</div>
         </a>
       </li>
@@ -307,7 +307,7 @@
       </li>
 
       <li class="menu-item">
-        <a href="/app-offer-list" class="menu-link">
+        <a href="/offers" class="menu-link">
           <div data-i18n="عرض العروض">عرض العروض</div>
         </a>
       </li>

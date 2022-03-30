@@ -27,8 +27,13 @@ class AuthorsController extends Controller{
         $author->email=$_POST['email'];
         $author->created_by=1;
         $author->is_active=$_POST['is_active'];
+        
+        if($author->save())
+        
+        $this->view('feedback',['success'=>'data inserted successful']);
+        else 
+        $this->view('feedback',['danger'=>'can not add data']);
 
-        $author->save();
 
     }
     function edit(){

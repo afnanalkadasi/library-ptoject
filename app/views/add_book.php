@@ -398,7 +398,7 @@
 
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
-  <form class="card-body" action="/save_user" method="POST">
+  <form class="card-body" action="/save_book" method="POST" enctype="multipart/form-data">
     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="multicol-username">عنوان الكتاب</label>
@@ -447,12 +447,16 @@
       </div>
       <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
       <label class="form-label" for="multicol-email"> الناشر</label>
-                    <select name="publisher_id" class="form-select item-details mb-2">
-                      <option selected disabled>Select Item</option>
-                      <option value="App Design">App Design</option>
-                      <option value="App Customization">App Customization</option>
-                      <option value="ABC Template">ABC Template</option>
-                      <option value="App Development">App Development</option>
+                    <select name="publishers" class="form-select item-details mb-2">
+                    <?php
+                foreach($params['publishers'] as $publisher){
+                 ?>
+    <option  value ='<?=$publisher['id']?>'><?=$publisher['name']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
+               
                     </select>
       </div>
       <div class="col-md-6">
