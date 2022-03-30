@@ -170,7 +170,7 @@
       </li>
 
       <li class="menu-item">
-        <a href="/app-user-list" class="menu-link">
+        <a href="/users" class="menu-link">
           <div data-i18n="عرض المستخدمين">عرض المستخدمين</div>
         </a>
       </li>
@@ -267,7 +267,7 @@
         </a>
       </li>
       <li class="menu-item">
-        <a href="/app-role-list" class="menu-link">
+        <a href="/roles" class="menu-link">
           <div data-i18n="عرض الصلاحيات">عرض الصلاحيات</div>
         </a>
       </li>
@@ -326,7 +326,7 @@
         </a>
       </li>
       <li class="menu-item">
-        <a href="/app-order-list" class="menu-link">
+        <a href="/orders" class="menu-link">
           <div data-i18n="عرض الطلب">عرض الطلب</div>
         </a>
       </li>
@@ -363,7 +363,7 @@
         </a>
       </li>
       <li class="menu-item">
-        <a href="/app-payements-list" class="menu-link">
+        <a href="/payements" class="menu-link">
           <div data-i18n="عرض الدفع">عرض الدفع </div>
         </a>
       </li>
@@ -420,7 +420,7 @@
       </li>
 
       <li class="menu-item">
-        <a href="/app-user_profile-list" class="menu-link">
+        <a href="/user_profile" class="menu-link">
           <div data-i18n=" عرض profile المستخدم" > عرض profile المستخدم </div>
         </a>
       </li>

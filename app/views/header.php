@@ -16,7 +16,7 @@
                     </div>
                     <div class="header-2">
                            <div class="logo"> 
-                                <a href="/"> <img src="img/img.png"></a>
+                                <a href="/"> <img src="images/img.png"></a>
                         </div>
                            <div> 
                                         <form action="" class="search-form">

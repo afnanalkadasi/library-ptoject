@@ -3,15 +3,22 @@ namespace coding\app\controllers;
 
 
 use coding\app\controllers\Controller;
+use coding\app\Models\Category;
 
 class HomeController extends Controller
 {
+    function listAll(){
+     
+        $this->view('index');
 
+    }
    
     public function index()
-    {
+    {   $categories=new Category();
+        $allCategories=$categories->getAll();
+
    
-        $this->view('index');
+        $this->view('index',$allCategories);
     }
 
     public function sal()

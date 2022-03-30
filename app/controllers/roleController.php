@@ -13,9 +13,34 @@ class roleController extends Controller{
     function editrole(){
         $this->view('edit_role');
     }
-    
-    function role(){
-        $this->view('app-role-list');
-    } 
+
+    function listAll(){
+        $roles=new role();
+        $allroles=$roles->getAll();
+
+        $this->view('app-role-list',$allroles);
+
+    }
+ 
+
+    function store(){
+        print_r($_POST);
+        print_r($_FILES);
+        $role=new role();
+        
+        $role->name=$_POST['name'];
+        $role->is_active=$_POST['is_active'];
+
+        $role->save();
+
+    }
+
+    function update(){
+
+    }
+    public function remove(){
+
+    }
+
 }
 ?>

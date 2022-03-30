@@ -394,7 +394,7 @@
 
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
-  <form class="card-body" action="/" method="POST">
+  <form class="card-body" action="/save_role" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="multicol-discount">الاسم</label>

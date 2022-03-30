@@ -1132,7 +1132,7 @@
       © <script>
       document.write(new Date().getFullYear())
       </script>
-      , made with ❤️ by <a href="https://themeselection.com/" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+      
     </div>
     <div>
       
@@ -1171,7 +1171,7 @@
 
   
   <div class="buy-now">
-    <a href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/" target="_blank" class="btn btn-danger btn-buy-now">Buy Now</a>
+    
   </div>
   
 

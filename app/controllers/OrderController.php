@@ -2,6 +2,7 @@
 namespace coding\app\controllers;
 
 
+use coding\app\Models\Order;
 
 class OrderController extends Controller{
 
