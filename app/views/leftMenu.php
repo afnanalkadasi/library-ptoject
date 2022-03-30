@@ -395,13 +395,13 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_user_payments" class="menu-link">
+        <a href="/add_user_payment" class="menu-link">
           <div data-i18n="اضافة طرق دفع المستخدم">اضافة طرق دفع المستخدم</div>
         </a>
       </li>
   
       <li class="menu-item">
-        <a href="/app-user_payment-list" class="menu-link">
+        <a href="/user_payment_ms" class="menu-link">
           <div data-i18n="عرضر طرق دفع المستخدم">عرض طرق دفع المستخدم</div>
         </a>
       </li>
