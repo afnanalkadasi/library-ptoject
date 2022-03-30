@@ -112,7 +112,10 @@ Router::get('/app-useraddress-list',[useraddressController::class,'useraddress']
 ////////////////////////////user_addresses///////////
 Router::get('/add_user_payment',[user_pay_MController::class,'add_user_payment']);
 Router::get('/edit_user_payment',[user_pay_MController::class,'edituser_payment']);
-Router::get('/app-user_payment-list',[user_pay_MController::class,'user_payment']);
+Router::get('/user_payment_ms',[user_pay_MController::class,'listAll']);
+Router::get('/remove_user_payment',[user_pay_MController::class,'remove']);
+Router::post('/save_user_payment',[user_pay_MController::class,'store']);
+Router::post('/update_user_payment',[user_pay_MController::class,'update']);
 ////////////////////////////user_profiles///////////
 Router::get('/user_profile',[user_profController::class,'listAll']);
 Router::get('/add_user_profile',[user_profController::class,'add_user_profile']);

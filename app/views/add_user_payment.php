@@ -398,26 +398,36 @@
 
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
-  <form class="card-body" action="/save_user" method="POST">
+  <form class="card-body" action="/save_user_payment" method="POST">
     <div class="row g-3">
     
       <div class="col-md-6 select2-primary">
         <label class="form-label" for="multicol-language">المستخدم</label>
-        <select id="multicol-language" class="select2 form-select" >
-          <option value="en" selected>English</option>
-          <option value="fr" selected>French</option>
-          <option value="de">German</option>
-          <option value="pt">Portuguese</option>
-        </select>
+        <select name="users" class="form-select item-details mb-2">
+                    <?php
+                foreach($params['users'] as $user){
+                 ?>
+    <option  value ='<?=$user['id']?>'><?=$user['name']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
+               
+                    </select>
       </div>
       <div class="col-md-6 select2-primary">
         <label class="form-label" for="multicol-language">الدفع </label>
-        <select id="multicol-language" class="select2 form-select" >
-          <option value="en" selected>English</option>
-          <option value="fr" selected>French</option>
-          <option value="de">German</option>
-          <option value="pt">Portuguese</option>
-        </select>
+        <select name="payements" class="form-select item-details mb-2">
+                    <?php
+                foreach($params['payements'] as $payment){
+                 ?>
+    <option  value ='<?=$payment['id']?>'><?=$payment['name']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
+               
+                    </select>
       </div>
       <div class="col-md-6">
         <div class="form-password-toggle">
