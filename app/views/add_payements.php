@@ -398,7 +398,7 @@
 
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
-  <form class="card-body" action="/save_user" method="POST">
+  <form class="card-body" action="/save_payement" method="POST" enctype="multipart/form-data">
     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="multicol-discount">الاسم</label>
@@ -411,14 +411,6 @@
           <label for="formFile" class="form-label">الصور</label>
           <input class="form-control" name="image" type="file" id="formFile">
         </div>
-        <div class="col-md-6 select2-primary">
-        <label class="form-label" for="multicol-language">انشى بواسطة </label>
-        <select id="multicol-language" class="select2 form-select" >
-          <option value="en" selected>English</option>
-          <option value="fr" selected>French</option>
-          <option value="de">German</option>
-          <option value="pt">Portuguese</option>
-        </select>
       </div>
       <div class="col-md-6">
         <div class="form-password-toggle">
@@ -436,11 +428,9 @@
         </div>
       </div>
     </div>
-    </div>
+ 
     
-    
-  
-    
+
     
     <div class="pt-4">
       <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>

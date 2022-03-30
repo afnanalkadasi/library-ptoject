@@ -34,7 +34,7 @@ $config=array(
 );
 $system=new AppSystem($config);
 
-Router::get('/', [HomeController::class, 'index']);
+Router::get('/', [HomeController::class, 'index'],[CategoryController::class,'listAll']);
 Router::get('/sal', [HomeController::class, 'sal']);
 Router::get('/category', [HomeController::class, 'category']);
 Router::get('/details', [HomeController::class, 'details']);
@@ -43,12 +43,13 @@ Router::get('/login', [HomeController::class, 'login']);
 Router::get('/sign_up', [HomeController::class, 'sign_up']);
 Router::get('/dashboards-ecommerce', [HomeController::class, 'dashboard']);
 ////////////////////////////user///////////
+Router::get('/users',[UsersController::class,'listAll']);
 Router::get('/new_user',[UsersController::class,'create']);
 Router::get('/edit_user',[UsersController::class,'editUser']);
-Router::get('/app-user-list', [UsersController::class, 'users']);
-Router::get('/remove_user',[UsersController::class,'delete']);
-Router::post('/users',[UsersController::class,'show']);
-Router::post('/save_user',[UsersController::class,'saveUser']);
+Router::get('/remove_user',[UsersController::class,'remove']);
+Router::post('/save_user',[UsersController::class,'store']);
+Router::post('/update_user',[UsersController::class,'update']);
+
 ////////////////////////////category///////////
 Router::get('/categories',[CategoryController::class,'listAll']);
 Router::get('/add_category',[CategoryController::class,'add_category']);
@@ -72,9 +73,12 @@ Router::get('/remove_publisher',[PublishersController::class,'remove']);
 Router::post('/save_publisher',[PublishersController::class,'store']);
 Router::post('/update_publisher',[PublishersController::class,'update']);
 ////////////////////////////book///////////
+Router::get('/books',[BooksController::class,'listAll']);
 Router::get('/add_book',[BooksController::class,'add_book']);
 Router::get('/edit_book',[BooksController::class,'editbook']);
-Router::get('/app-book-list',[BooksController::class,'book']);
+Router::get('/remove_book',[BooksController::class,'remove']);
+Router::post('/save_book',[BooksController::class,'store']);
+Router::post('/update_book',[BooksController::class,'update']);
 ////////////////////////////city///////////
 Router::get('/city',[CityController::class,'listAll']);
 Router::get('/add_city',[CityController::class,'add_city']);
@@ -95,9 +99,12 @@ Router::get('/add_orderdetails',[orderdetailsController::class,'add_orderdetails
 Router::get('/edit_orderdetails',[orderdetailsController::class,'editorderdetails']);
 Router::get('/app-orderdetails-list',[orderdetailsController::class,'orderdetails']);
 ////////////////////////////payements///////////
+Router::get('/payements',[payementController::class,'listAll']);
 Router::get('/add_payements',[payementController::class,'add_payements']);
 Router::get('/edit_payements',[payementController::class,'editpayements']);
-Router::get('/app-payements-list',[payementController::class,'payements']);
+Router::get('/remove_payement',[payementController::class,'remove']);
+Router::post('/save_payement',[payementController::class,'store']);
+Router::post('/update_payement',[payementController::class,'update']);
 ////////////////////////////user_addresses///////////
 Router::get('/add_useraddress',[useraddressController::class,'add_useraddress']);
 Router::get('/edit_useraddress',[useraddressController::class,'edituseraddress']);
@@ -107,18 +114,23 @@ Router::get('/add_user_payment',[user_pay_MController::class,'add_user_payment']
 Router::get('/edit_user_payment',[user_pay_MController::class,'edituser_payment']);
 Router::get('/app-user_payment-list',[user_pay_MController::class,'user_payment']);
 ////////////////////////////user_profiles///////////
+Router::get('/user_profile',[user_profController::class,'listAll']);
 Router::get('/add_user_profile',[user_profController::class,'add_user_profile']);
 Router::get('/edit_user_profile',[user_profController::class,'edituser_profile']);
-Router::get('/app-user_profile-list',[user_profController::class,'user_profile']);
+Router::get('/remove_user_profile',[user_profController::class,'remove']);
+Router::post('/save_user_profile',[user_profController::class,'store']);
+Router::post('/update_user_profile',[user_profController::class,'update']);
 ////////////////////////////user_token///////////
 Router::get('/add_user_token',[user_tokController::class,'add_user_token']);
 Router::get('/edit_user_token',[user_tokController::class,'edituser_token']);
 Router::get('/app-user_token-list',[user_tokController::class,'user_token']);
 ////////////////////////////role///////////
+Router::get('/roles',[roleController::class,'listAll']);
 Router::get('/add_role',[roleController::class,'add_role']);
 Router::get('/edit_role',[roleController::class,'editrole']);
-Router::get('/app-role-list',[roleController::class,'role']);
-
+Router::get('/remove_role',[roleController::class,'remove']);
+Router::post('/save_role',[roleController::class,'store']);
+Router::post('/update_role',[roleController::class,'update']);
 
 $system->start();
 

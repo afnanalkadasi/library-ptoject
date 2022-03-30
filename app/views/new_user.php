@@ -413,13 +413,15 @@
       </div>
       <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
       <label class="form-label" for="multicol-email">الصلاحية</label>
-                    <select class="form-select item-details mb-2">
-                      <option selected disabled>Select Item</option>
-                      <option value="App Design">App Design</option>
-                      <option value="App Customization">App Customization</option>
-                      <option value="ABC Template">ABC Template</option>
-                      <option value="App Development">App Development</option>
-                    </select>
+      <select name="roles" class="form-select item-details mb-2">
+                        <?php foreach($params as $role){?>
+                 ?>
+    <option  value ='<?=$role['id']?>'><?=$role['name']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
+      </select>
       </div>
       <div class="col-md-6">
         <div class="form-password-toggle">

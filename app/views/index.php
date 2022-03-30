@@ -24,68 +24,19 @@
                                                 <div id="slider-container_im">
                                                   <span onclick="slideRight()" class="btn_im"></span>
                                                     <div id="slider">
-                                                                <div class="column slide_im">
-                       
-                                                                                <div class="card">
-                                                                                       <img src="svg/svgexport-46.svg" class="cr_icon">
-                                                                                   <h3 style="color:  hsl(355, 69%, 16%);"> دين</h3>
-                                                                                 </div>
-                                                                            
-                                                                </div>
-                                                                <div class="column slide_im">
-                              
-                                                                                <div class="card">
-                                                                               <img src="svg/svgexport-42.svg" class="cr_icon">
-                                                                           <h3 style="color: #ee7428">تاريخ</h3>
-                                                                          
-                                                                         </div>
-                                                                      
-                                                                       </div>
-                                                                       
-                                                                       <div class="column slide_im">
-                                                                      
-                                                                         <div class="card">
-                                                                               <img src="svg/svgexport-40.svg" class="cr_icon">
-                                                                           <h3 style="color: #726598">روايات</h3>
-                                                                         </div>
-                                                                   
-                                                                       </div>
-                                               
-                                                                       <div class="column slide_im">
-                                                                                     
-                                                                               <div class="card">
-                                                                                     <img src="svg/svgexport-43.svg" class="cr_icon">
-                                                                                 <h3 style="color: #cb3378">سياسة</h3>
-                                                                               </div>
-                                                                           
-                                                                       </div>
-                                                                             
-                                                                       <div class="column slide_im">
-                                                                                     
-                                                                               <div class="card">
-                                                                                     <img src="svg/svgexport-45.svg" class="cr_icon">
-                                                                                 <h3 style="color: #1d8ebd">اقتصاد</h3>
-                                                                               </div>
-                                                                              
-                                                                       </div>
-                                               
-                                                                       <div class="column slide_im">
-                                                                                     
-                                                                                   <div class="card">
-                                                                                         <img src="svg/svgexport-47.svg" class="cr_icon">
-                                                                                     <h3 style="color: #61b22f">طبخ</h3>
-                                                                                   </div>
-                                                                                   
-                                                                       </div>
-                                                                               
-                                                                       <div class="column slide_im">
-                                                                                     
-                                                                         <div class="card">
-                                                                               <img src="svg/svgexport-48.svg" class="cr_icon">
-                                                                           <h3 style="color: #a9163f;">تربية</h3>
-                                                                        </div>
-                                                                    
-                                                                       </div>
+
+<?php foreach($params as $category){?>
+
+          <div class="column slide_im">
+                        
+                        <div class="card">
+                        <img src="images/<?= $category['image'];?>" class="cr_icon">
+                        <h3 style="color:  hsl(355, 69%, 16%); font-size:18px;"> <?= $category['name'];?></h3>
+                        </div>
+                
+        </div>
+ <?php } ?>
+                                                            
                                                      
                                                   </div>
                                                   <span onclick="slideLeft()" class="btn_im"></span>

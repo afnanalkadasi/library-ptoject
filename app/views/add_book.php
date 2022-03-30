@@ -420,22 +420,29 @@
       </div>
       <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
       <label class="form-label" for="multicol-email">  القسم</label>
-                    <select name="category_id" class="form-select item-details mb-2">
-                      <option selected disabled>Select Item</option>
-                      <option value="App Design">App Design</option>
-                      <option value="App Customization">App Customization</option>
-                      <option value="ABC Template">ABC Template</option>
-                      <option value="App Development">App Development</option>
+                    <select name="categories" class="form-select item-details mb-2">
+                    <?php
+                foreach($params['categories'] as $category){
+                 ?>
+    <option  value ='<?=$category['id']?>'><?=$category['name']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
+               
                     </select>
       </div>
       <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
       <label class="form-label" for="multicol-email"> الكاتب</label>
-                    <select name="author_id" class="form-select item-details mb-2">
-                      <option selected disabled>Select Item</option>
-                      <option value="App Design">App Design</option>
-                      <option value="App Customization">App Customization</option>
-                      <option value="ABC Template">ABC Template</option>
-                      <option value="App Development">App Development</option>
+                    <select name="authors" class="form-select item-details mb-2">
+                    <?php
+                foreach($params['authors'] as $author){
+                 ?>
+    <option  value ='<?=$author['id']?>'><?=$author['name']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
                     </select>
       </div>
       <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
