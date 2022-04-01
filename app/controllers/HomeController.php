@@ -4,21 +4,23 @@ namespace coding\app\controllers;
 
 use coding\app\controllers\Controller;
 use coding\app\Models\Category;
+use coding\app\Models\Book;
 
 class HomeController extends Controller
 {
-    function listAll(){
-     
-        $this->view('index');
-
-    }
    
     public function index()
     {   $categories=new Category();
         $allCategories=$categories->getAll();
 
-   
-        $this->view('index',$allCategories);
+        $books=new Book();
+        $allbooks=$books->getAll();
+
+        $data=["books" => $allbooks,
+        "categories" =>$allCategories
+            ];
+
+        $this->view('index',$data);
     }
 
     public function sal()

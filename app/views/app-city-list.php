@@ -498,13 +498,13 @@
         <tbody>
        
          
-         <?php foreach($params as $citغ){?>
+         <?php foreach($params as $city){?>
           <tr>
             
-            <td><?= $citغ['name'];?></td>
+            <td><?= $city['name'];?></td>
        
             <td>
-            <?php if($citغ['is_active']==1) {?>    
+            <?php if($city['is_active']==1) {?>    
             <span class="badge bg-label-success me-1">مفعل</span>
             <?php }
             else {?>
@@ -512,7 +512,7 @@
             <?php } ?>
             </td>
             <td>
-            <a href="/edit_citغ/<?php echo $citغ['id'];?>" class="btn btn-icon btn-outline-dribbble">
+            <a href="/admin/edit_city/<?php echo $citغ['id'];?>" class="btn btn-icon btn-outline-dribbble">
                 <i class="tf-icons bx bx-edit-alt me-1"></i>
               </a>
               <button type="button" class="btn btn-icon btn-outline-dribbble">
@@ -561,37 +561,4 @@
 
 
 
-
-  <!-- Core JS -->
-  <!-- build:js assets/vendor/js/core.js -->
-  <script src="assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="assets/vendor/libs/popper/popper.js"></script>
-  <script src="assets/vendor/js/bootstrap.js"></script>
-  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-  <script src="assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
-
-  <script src="assets/vendor/js/menu.js"></script>
-  <!-- endbuild -->
-
-  <!-- Vendors JS -->
-  <script src="assets/vendor/libs/cleavejs/cleave.js"></script>
-  <script src="assets/vendor/libs/cleavejs/cleave-phone.js"></script>
-  <script src="assets/vendor/libs/moment/moment.js"></script>
-  <script src="assets/vendor/libs/flatpickr/flatpickr.js"></script>
-  <script src="assets/vendor/libs/select2/select2.js"></script>
-
-  <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Page JS -->
-  <script src="assets/js/form-layouts.js"></script>
-
-</body>
-
-
-<!-- form-layouts-vertical.html , Sat, 26 Mar 2022 16:53:13 GMT -->
-
-</html>
+ <?php include "js_dash.php"?>

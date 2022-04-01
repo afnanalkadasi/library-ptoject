@@ -114,7 +114,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -150,7 +150,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="../assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -186,7 +186,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/9.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="../assets/img/avatars/9.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -222,7 +222,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/5.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="../assets/img/avatars/5.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -240,7 +240,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/6.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="../assets/img/avatars/6.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -286,7 +286,7 @@
           <li class="nav-item navbar-dropdown dropdown-user dropdown">
             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
               <div class="avatar avatar-online">
-                <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
               </div>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
@@ -295,7 +295,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0 me-3">
                       <div class="avatar avatar-online">
-                        <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                        <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
                       </div>
                     </div>
                     <div class="flex-grow-1">
@@ -398,7 +398,7 @@
 
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
-  <form class="card-body" action="/save_user" method="POST">
+  <form class="card-body" action="/admin/save_user" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="multicol-username">اسم المستخدم</label>
@@ -496,31 +496,31 @@
   
 
   <!-- Core JS -->
-  <!-- build:js assets/vendor/js/core.js -->
-  <script src="assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="assets/vendor/libs/popper/popper.js"></script>
-  <script src="assets/vendor/js/bootstrap.js"></script>
-  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <!-- build:js ../assets/vendor/js/core.js -->
+  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../assets/vendor/js/bootstrap.js"></script>
+  <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
   
-  <script src="assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  <script src="../assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="../assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="../assets/vendor/libs/typeahead-js/typeahead.js"></script>
   
-  <script src="assets/vendor/js/menu.js"></script>
+  <script src="../assets/vendor/js/menu.js"></script>
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="assets/vendor/libs/cleavejs/cleave.js"></script>
-<script src="assets/vendor/libs/cleavejs/cleave-phone.js"></script>
-<script src="assets/vendor/libs/moment/moment.js"></script>
-<script src="assets/vendor/libs/flatpickr/flatpickr.js"></script>
-<script src="assets/vendor/libs/select2/select2.js"></script>
+  <script src="../assets/vendor/libs/cleavejs/cleave.js"></script>
+<script src="../assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+<script src="../assets/vendor/libs/moment/moment.js"></script>
+<script src="../assets/vendor/libs/flatpickr/flatpickr.js"></script>
+<script src="../assets/vendor/libs/select2/select2.js"></script>
 
   <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 
   <!-- Page JS -->
-  <script src="assets/js/form-layouts.js"></script>
+  <script src="../assets/js/form-layouts.js"></script>
   
 </body>
 

@@ -4,16 +4,49 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
+
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
+
+=========================================================
+ -->
 <!-- beautify ignore:start -->
-<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed " dir="ltr" data-theme="theme-semi-dark" data-assets-path="assets/" data-template="vertical-menu-template-semi-dark">
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed " dir="ltr" data-theme="theme-semi-dark" data-assets-path="../../assets/" data-template="vertical-menu-template-semi-dark">
 
   
-<!-- form-layouts-vertical.html , Sat, 26 Mar 2022 16:53:12 GMT -->
+<!-- dashboards-ecommerce.html , Sat, 26 Mar 2022 16:50:45 GMT -->
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title> Vertical Layouts - Forms | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>eCommerce - Dashboards | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
     
     <meta name="description" content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!" />
     <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
@@ -29,31 +62,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css" />
-    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css" />
-    <link rel="stylesheet" href="assets/vendor/fonts/flag-icons.css" />
+    <link rel="stylesheet" href="../../assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="assets/vendor/css/rtl/theme-semi-dark.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="assets/css/demo.css" />
+    <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-semi-dark.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../../assets/css/demo.css" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="assets/vendor/libs/typeahead-js/typeahead.css" />
-    <link rel="stylesheet" href="assets/vendor/libs/flatpickr/flatpickr.css" />
-<link rel="stylesheet" href="assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
-    
+    <link rel="stylesheet" href="../../assets/vendor/css/pages/card-analytics.css" />
     <!-- Helpers -->
-    <script src="assets/vendor/js/helpers.js"></script>
+    <script src="../../assets/vendor/js/helpers.js"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="assets/vendor/js/template-customizer.js"></script>
+    <script src="../../assets/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="assets/js/config.js"></script>
+    <script src="../../assets/js/config.js"></script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -164,13 +196,13 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/new_user" class="menu-link">
+        <a href="/admin/new_user" class="menu-link">
           <div data-i18n="اضافة مستخدم">اضافة مستخدم</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="/users" class="menu-link">
+        <a href="/admin/users" class="menu-link">
           <div data-i18n="عرض المستخدمين">عرض المستخدمين</div>
         </a>
       </li>
@@ -184,13 +216,13 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_category" class="menu-link">
+        <a href="/admin/add_category" class="menu-link">
           <div data-i18n="اضافة قسم">اضافة قسم</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="/categories" class="menu-link">
+        <a href="/admin/categories" class="menu-link">
           <div data-i18n="عرض الاقسام">عرض الاقسام</div>
         </a>
       </li>
@@ -204,12 +236,12 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_author" class="menu-link">
+        <a href="/admin/add_author" class="menu-link">
           <div data-i18n="اضافة كاتب">اضافة كاتب</div>
         </a>
       </li>
       <li class="menu-item">
-        <a href="/authors" class="menu-link">
+        <a href="/admin/authors" class="menu-link">
           <div data-i18n="عرض الكاتب">عرض الكاتب</div>
         </a>
       </li>
@@ -223,13 +255,13 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_publisher" class="menu-link">
+        <a href="/admin/add_publisher" class="menu-link">
           <div data-i18n="اضاقة ناشر">اضافة ناشر</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="/publishers" class="menu-link">
+        <a href="/admin/publishers" class="menu-link">
           <div data-i18n="عرض الناشرين">عرض الناشرين</div>
         </a>
       </li>
@@ -243,12 +275,12 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_book" class="menu-link">
+        <a href="/admin/add_book" class="menu-link">
           <div data-i18n="اضافة كتاب">اضافة كتاب</div>
         </a>
       </li>
       <li class="menu-item">
-        <a href="/books" class="menu-link">
+        <a href="/admin/books" class="menu-link">
           <div data-i18n="عرض الكتب">عرض الكتب</div>
         </a>
       </li>
@@ -262,12 +294,12 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_role" class="menu-link">
+        <a href="/admin/add_role" class="menu-link">
           <div data-i18n="اضافة صلاحية">اضافة صلاحية</div>
         </a>
       </li>
       <li class="menu-item">
-        <a href="/roles" class="menu-link">
+        <a href="/admin/roles" class="menu-link">
           <div data-i18n="عرض الصلاحيات">عرض الصلاحيات</div>
         </a>
       </li>
@@ -281,13 +313,13 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_city" class="menu-link">
+        <a href="/admin/add_city" class="menu-link">
           <div data-i18n="اضافة مدينة"> اضافة مدينة</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="/city" class="menu-link">
+        <a href="/admin/city" class="menu-link">
           <div data-i18n="عرض المدن">عرض المدن</div>
         </a>
       </li>
@@ -301,13 +333,13 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_offer" class="menu-link">
+        <a href="/admin/add_offer" class="menu-link">
           <div data-i18n="اضافة العروض">اضافة العروض</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="/offers" class="menu-link">
+        <a href="/admin/offers" class="menu-link">
           <div data-i18n="عرض العروض">عرض العروض</div>
         </a>
       </li>
@@ -321,12 +353,12 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_order" class="menu-link">
+        <a href="/admin/add_order" class="menu-link">
           <div data-i18n="اضافة الطلب">اضافة الطلب</div>
         </a>
       </li>
       <li class="menu-item">
-        <a href="/orders" class="menu-link">
+        <a href="/admin/orders" class="menu-link">
           <div data-i18n="عرض الطلب">عرض الطلب</div>
         </a>
       </li>
@@ -340,12 +372,12 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_orderdetails" class="menu-link">
+        <a href="/admin/add_orderdetails" class="menu-link">
           <div data-i18n="اضافة تفاصيل الطلب">اضافة تفاصيل الطلب</div>
         </a>
       </li>
       <li class="menu-item">
-        <a href="/app-orderdetails-list" class="menu-link">
+        <a href="/admin/orderdetails" class="menu-link">
           <div data-i18n="عرض تفاصيل الطلب"> عرض تفاصيل الطلب</div>
         </a>
       </li>
@@ -358,12 +390,12 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_payements" class="menu-link">
+        <a href="/admin/add_payements" class="menu-link">
           <div data-i18n="اضافة الدفع">اضافة الدفع</div>
         </a>
       </li>
       <li class="menu-item">
-        <a href="/payements" class="menu-link">
+        <a href="/admin/payements" class="menu-link">
           <div data-i18n="عرض الدفع">عرض الدفع </div>
         </a>
       </li>
@@ -376,13 +408,13 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_useraddress" class="menu-link">
+        <a href="/admin/add_useraddress" class="menu-link">
           <div data-i18n="اضافة عنوان المستخدم">اضافة عنوان المستخدم</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="/app-useraddress-list" class="menu-link">
+        <a href="/admin/useraddress" class="menu-link">
           <div data-i18n="عرض عنوان المستخدم ">عرض عنوان المستخدم</div>
         </a>
       </li>
@@ -395,13 +427,13 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_user_payment" class="menu-link">
+        <a href="/admin/add_user_payment" class="menu-link">
           <div data-i18n="اضافة طرق دفع المستخدم">اضافة طرق دفع المستخدم</div>
         </a>
       </li>
   
       <li class="menu-item">
-        <a href="/user_payment_ms" class="menu-link">
+        <a href="/admin/user_payment_ms" class="menu-link">
           <div data-i18n="عرضر طرق دفع المستخدم">عرض طرق دفع المستخدم</div>
         </a>
       </li>
@@ -414,13 +446,13 @@
     </a>
     <ul class="menu-sub">
     <li class="menu-item">
-        <a href="/add_user_profile" class="menu-link">
+        <a href="/admin/add_user_profile" class="menu-link">
           <div data-i18n="اضافة profile المستخدم">اضافة profile المستخدم</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="/user_profile" class="menu-link">
+        <a href="/admin/user_profile" class="menu-link">
           <div data-i18n=" عرض profile المستخدم" > عرض profile المستخدم </div>
         </a>
       </li>

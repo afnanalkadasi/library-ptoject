@@ -36,7 +36,7 @@ class AuthorsController extends Controller{
 
 
     }
-    function edit(){
+    function editauthor(){
         $this->view('edit_author');
     }
     function update(){

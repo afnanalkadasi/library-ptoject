@@ -479,13 +479,13 @@
             
             
 <h4 class="fw-bold py-3 mb-4">
-  <span class="text-muted fw-light">UI elements /</span> Alerts
+  <span class="text-muted fw-light"></span> 
 </h4>
 
   <!-- Dismissible Alerts -->
   <div class="col-md-12">
     <div class="card">
-      <h5 class="card-header">Dismissible Alerts</h5>
+      <h5 class="card-header"> </h5>
       <div class="card-body">
       <?php  if(isset($params)) {
           

@@ -39,8 +39,6 @@ class Router{
         $method=$this->request->getRequestMethod();
             $callback=self::$routes[$method][$route];
 
-        
-        
             if(isset($callback))
             {
                 if(is_array($callback))
@@ -58,8 +56,7 @@ class Router{
 
     }
 
-    public function view($v,$params){
-
+    public function view($v,$params = null){
         require_once __DIR__."/../views/$v.php";
 
     }

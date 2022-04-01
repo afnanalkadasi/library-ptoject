@@ -2,13 +2,14 @@
 namespace coding\app\controllers;
 
 use coding\app\Models\User_profile;
-
+use coding\app\Models\User;
 
 class user_profController extends Controller{
-
-
+   
     function add_user_profile(){
-        $this->view('add_user_profile');
+        $users=new User();
+        $allusers=$users->getAll();
+        $this->view('add_user_profile',$allusers);
     }
     function edituser_profile(){
         $this->view('edit_user_profile');
@@ -28,14 +29,12 @@ class user_profController extends Controller{
         print_r($_FILES);
         $user_profile=new User_profile();
         
-        $user_profile->name=$_POST['name'];
         $user_profile->phone=$_POST['phone'];
         $user_profile->address=$_POST['address'];
         $imageName=$this->uploadFile($_FILES['image']);
-       
         $user_profile->image=$imageName!=null?$imageName:"default.png";
-        $user_profile->created_by=1;
-        $user_profile->is_active=$_POST['is_active'];
+        $user_profile->user_id =$_POST['users'];
+
 
         if($user_profile->save())
         
