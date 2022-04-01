@@ -39,7 +39,7 @@ class PublishersController extends Controller{
         $this->view('feedback',['danger'=>'can not add data']);
 
     }
-    function edit(){
+    function editpublisher(){
         $this->view('edit_publisher');
     }
     function update(){

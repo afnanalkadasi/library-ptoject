@@ -37,7 +37,7 @@ class CityController extends Controller{
         $this->view('feedback',['danger'=>'can not add data']);
 
     }
-    function edit(){
+    function editcity(){
         $this->view('edit_city');
     }
     function update(){

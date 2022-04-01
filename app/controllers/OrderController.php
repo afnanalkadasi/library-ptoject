@@ -50,15 +50,13 @@ class OrderController extends Controller{
         $order=new order();
 
      
-        $order->title=$_POST['title'];
+        $order->total=$_POST['total'];
         $order->discount=$_POST['discount'];
-        $order->start_date=$_POST['start_date'];
-        $order->end_date=$_POST['end_date'];
-        $order->book_ids=$_POST['user_payment_methods'];
-        $order->category_ids=$_POST['users'];
-        $order->all_user_payment_methods=$_POST['all_user_payment_methods'];
-        $order->created_by=1;
-        $order->is_active=$_POST['is_active'];
+        $order->net_total=$_POST['net_total'];
+        $order->payment_method=$_POST['user_payment_methods'];
+        $order->user_id=$_POST['users'];
+        $order->address_id=$_POST['user_addresses'];
+        $order->status=$_POST['status'];
 
 
         if($order->save())

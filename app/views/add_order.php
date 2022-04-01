@@ -398,47 +398,62 @@
 
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
-  <form class="card-body" action="/save_user" method="POST">
+  <form class="card-body" action="/admin/save_order" method="POST">
     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="multicol-discount">الاجمالي</label>
-        <input name="total" type="number" id="multicol-discount" class="form-control" placeholder="" />
+        <input name="total" type="text" id="multicol-discount" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
         <label class="form-label" for="multicol-discount">الخصم</label>
-        <input name="discount" type="number" id="multicol-discount" class="form-control" placeholder="" />
+        <input name="discount" type="text" id="multicol-discount" class="form-control" placeholder="" />
       </div>
       <div class="col-md-6">
         <label class="form-label" for="multicol-discount">net_total</label>
-        <input name="net_total" type="number" id="multicol-discount" class="form-control" placeholder="" />
+        <input name="net_total" type="text" id="multicol-discount" class="form-control" placeholder="" />
       </div>
       
       <div class="col-md-6 select2-primary">
         <label class="form-label" for="multicol-language">المستخدم</label>
-        <select id="multicol-language" class="select2 form-select" >
-          <option value="en" selected>English</option>
-          <option value="fr" selected>French</option>
-          <option value="de">German</option>
-          <option value="pt">Portuguese</option>
-        </select>
+        <select name="users" class="form-select item-details mb-2">
+                    <?php
+                foreach($params['users'] as $user){
+                 ?>
+    <option  value ='<?=$user['id']?>'><?=$user['name']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
+               
+                    </select>
       </div>
       <div class="col-md-6 select2-primary">
         <label class="form-label" for="multicol-language">طريقة الدفع</label>
-        <select id="multicol-language" class="select2 form-select" >
-          <option value="en" selected>English</option>
-          <option value="fr" selected>French</option>
-          <option value="de">German</option>
-          <option value="pt">Portuguese</option>
-        </select>
+        <select name="user_payment_methods" class="form-select item-details mb-2">
+                    <?php
+                foreach($params['user_payment_methods'] as $user_payment_method){
+                 ?>
+    <option  value ='<?=$user_payment_method['id']?>'><?=$user_payment_method['payement_id']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
+               
+                    </select>
       </div>
       <div class="col-md-6 select2-primary">
         <label class="form-label" for="multicol-language">العنوان </label>
-        <select id="multicol-language" class="select2 form-select" >
-          <option value="en" selected>English</option>
-          <option value="fr" selected>French</option>
-          <option value="de">German</option>
-          <option value="pt">Portuguese</option>
-        </select>
+        <select name="user_addresses" class="form-select item-details mb-2">
+                    <?php
+                foreach($params['user_addresses'] as $user_address){
+                 ?>
+    <option  value ='<?=$user_address['id']?>'><?=$user_address['address']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
+               
+                    </select>
       </div>
 
 
@@ -504,36 +519,4 @@
 
 
   
-
-  <!-- Core JS -->
-  <!-- build:js assets/vendor/js/core.js -->
-  <script src="assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="assets/vendor/libs/popper/popper.js"></script>
-  <script src="assets/vendor/js/bootstrap.js"></script>
-  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-  
-  <script src="assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
-  
-  <script src="assets/vendor/js/menu.js"></script>
-  <!-- endbuild -->
-
-  <!-- Vendors JS -->
-  <script src="assets/vendor/libs/cleavejs/cleave.js"></script>
-<script src="assets/vendor/libs/cleavejs/cleave-phone.js"></script>
-<script src="assets/vendor/libs/moment/moment.js"></script>
-<script src="assets/vendor/libs/flatpickr/flatpickr.js"></script>
-<script src="assets/vendor/libs/select2/select2.js"></script>
-
-  <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Page JS -->
-  <script src="assets/js/form-layouts.js"></script>
-  
-</body>
-
-
-<!-- form-layouts-vertical.html , Sat, 26 Mar 2022 16:53:13 GMT -->
-</html>
+  <?php include "js_dash.php"?>
