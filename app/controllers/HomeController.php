@@ -5,6 +5,8 @@ namespace coding\app\controllers;
 use coding\app\controllers\Controller;
 use coding\app\Models\Category;
 use coding\app\Models\Book;
+use coding\app\Models\User;
+use coding\app\Models\Offer;
 
 class HomeController extends Controller
 {
@@ -13,10 +15,14 @@ class HomeController extends Controller
     {   $categories=new Category();
         $allCategories=$categories->getAll();
 
+        $offers=new Offer();
+        $alloffers=$offers->getAll();
+
         $books=new Book();
         $allbooks=$books->getAll();
 
         $data=["books" => $allbooks,
+        "offers"=> $alloffers,
         "categories" =>$allCategories
             ];
 
@@ -30,11 +36,26 @@ class HomeController extends Controller
 
     public function category()
     {
-        $this->view('category');
+        $categories=new Category();
+        $allCategories=$categories->getAll();
+
+       
+        $books=new Book();
+        $allbooks=$books->getAll();
+
+        $data=["books" => $allbooks,
+        "categories" =>$allCategories
+            ];
+
+        $this->view('category',$data);
     }
-    public function details()
+  
+   
+    public function details($params=[])
     {
-        $this->view('details');
+        $book=new Book();
+        $result=$book->getSingleRow($params['id']);
+        $this->view('details',$result);
     }
     
     public function checkout()
@@ -47,7 +68,10 @@ class HomeController extends Controller
     }
     public function login()
     {
-        $this->view('login');
+        $users=new User();
+        $allusers=$users->getAll();
+
+        $this->view('login',$allusers);
     }
     public function sign_up()
     {

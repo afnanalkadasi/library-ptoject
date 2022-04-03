@@ -36,8 +36,7 @@ class useraddressController extends Controller{
  
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+     
         $useraddress=new User_address();
 
      

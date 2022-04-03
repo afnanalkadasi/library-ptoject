@@ -14,7 +14,7 @@ if($row)
   {
     $_SESSION["email"]=$row["email"];
     $_SESSION["password"]=$row["password"];
-   header("Location:index.php");
+   header("Location:/admin/dashboards-ecommerce");
 }
 else{
   echo '<script>alert(" Sorry !! username or password is wrong !" )</script>';
@@ -37,7 +37,7 @@ else{
             
             <div id="" class="">
             <!-- <span  onclick="document.getElementById('idlog').style.display='none' " class="close2" title="Close Modal">&times;</span> -->
-            <form class="modal-content animate" action="/admin/dashboards-ecommerce" method="POST">
+            <form class="modal-content animate" action="/login" method="POST">
                 <div class="textcontainer">
                           <h2>تسجيل الدخول</h2>
                           <hr>

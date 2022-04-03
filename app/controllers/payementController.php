@@ -21,8 +21,7 @@ class payementController extends Controller{
  
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+ 
         $payement=new Payement();
         
         $payement->name=$_POST['name'];

@@ -27,8 +27,8 @@ class UsersController extends Controller{
 
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+        // print_r($_POST);
+        // print_r($_FILES);
         $user=new User();
         
         $user->name=$_POST['name'];

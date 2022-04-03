@@ -383,44 +383,56 @@
 
       
 
-      <!-- Content wrapper -->
-      <div class="content-wrapper">
+<div class="content-wrapper">
 
         <!-- Content -->
         
-          <div class="container-xxl flex-grow-1 container-p-y">
+    <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> ADD  CATEGORY</h4>
+  <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span>تعديل قسم </h4>
 
 
 
 
 <!-- Multi Column with Form Separator -->
-<div class="card mb-4">
-  <form class="card-body" action="/save_user" method="POST">
-    <div class="row g-3">
+  <div class="card mb-4">
+    <form class="card-body" action="/admin/edit_category" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<?php echo $params->id ?>">
+     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="multicol-username">اسم القسم</label>
-        <input name="name" type="text" id="multicol-username" class="form-control" placeholder="" />
+        <input name="name"   value="<?php echo $params->name ?>" type="text" id="multicol-username" class="form-control" placeholder="" />
       </div>
-     
+      
       <div class="col-md-6">
-          <label for="formFile" class="form-label">الصورة</label>
-          <input class="form-control" name="image" type="file" id="formFile">
+        <label class="form-label" for="multicol-email">صورة القسم</label>
+        <div class="input-group input-group-merge">
+          <input  name="image"  value="<?php echo $params->image ?>" type="file"  class="form-control"  aria-describedby="multicol-email2" />
+          
         </div>
-   <div class="col-md-6">
+      </div>
+      <p><img src="/../images/<?php echo $params->image ?>" width="50"></p>  
+      <div class="col-md-6">
         <div class="form-password-toggle">
-          <label class="form-label" for="multicol-confirm-password">الحالة</label>
-          <div class="input-group input-group-merge">
-          <label class="switch">
-              <input name="is_active" value=1 type="checkbox" checked class="switch-input" />
-              <span class="switch-toggle-slider">
-                <span class="switch-on"></span>
-                <span class="switch-off"></span>
-              </span>
-              <span class="switch-label"> مفعل </span>
-            </label>
+        <label class="switch">
+                      <?php if($params->is_active == 1) {?>    
+                          <input name="is_active" value="0" type="checkbox" checked class="switch-input" />
+                          <span class="switch-toggle-slider">
+                            <span class="switch-on"></span>
+                            <span class="switch-off"></span>
+                          </span>
+                          <span class="switch-label">active</span>
+                      <?php }
+                      else {?>
+                          <input name="is_active" value="1" type="checkbox" class="switch-input" />
+                          <span class="switch-toggle-slider">
+                            <span class="switch-on"></span>
+                            <span class="switch-off"></span>
+                          </span>
+                          <span class="switch-label">non-active</span>
+                      <?php } ?>
+          </label>
           </div>
         </div>
       </div>
@@ -428,12 +440,13 @@
     
     
     
+    
     <div class="pt-4">
       <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
       <button type="reset" class="btn btn-label-secondary">Cancel</button>
     </div>
-  </form>
-</div>
+    </form>
+  </div>
 
 
 
@@ -469,38 +482,4 @@
 
   
 
-
-  
-
-  <!-- Core JS -->
-  <!-- build:js assets/vendor/js/core.js -->
-  <script src="assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="assets/vendor/libs/popper/popper.js"></script>
-  <script src="assets/vendor/js/bootstrap.js"></script>
-  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-  
-  <script src="assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
-  
-  <script src="assets/vendor/js/menu.js"></script>
-  <!-- endbuild -->
-
-  <!-- Vendors JS -->
-  <script src="assets/vendor/libs/cleavejs/cleave.js"></script>
-<script src="assets/vendor/libs/cleavejs/cleave-phone.js"></script>
-<script src="assets/vendor/libs/moment/moment.js"></script>
-<script src="assets/vendor/libs/flatpickr/flatpickr.js"></script>
-<script src="assets/vendor/libs/select2/select2.js"></script>
-
-  <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Page JS -->
-  <script src="assets/js/form-layouts.js"></script>
-  
-</body>
-
-
-<!-- form-layouts-vertical.html , Sat, 26 Mar 2022 16:53:13 GMT -->
-</html>
+ <?php include "js_dash.php"?>

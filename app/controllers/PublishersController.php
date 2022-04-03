@@ -15,8 +15,7 @@ class PublishersController extends Controller{
         $this->view('app-publisher-list',$allpublishers);
     }
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+     
         $publisher=new Publisher();
         
         $publisher->name=$_POST['name'];

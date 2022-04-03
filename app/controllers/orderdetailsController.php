@@ -2,20 +2,22 @@
 namespace coding\app\controllers;
 
 use coding\app\Models\Order_details;
-
+use coding\app\Models\Book;
+use coding\app\Models\Order;
 
 class orderdetailsController extends Controller{
 
 
-    function add_orderdetails(){
-        $this->view('add_orderdetails');
-    }
-    function editorderdetails(){
-        $this->view('edit_orderdetails');
-    }
+  
     
-    function orderdetails(){
-        $this->view('app-orderdetails-list');
+    function listAll(){
+        $orderdetails=new Order_details();
+        $allorderdetails=$orderdetails->getAll();
+
+   
+        
+       
+        $this->view('app-orderdetails-list', $allorderdetails);
     } 
 
 }

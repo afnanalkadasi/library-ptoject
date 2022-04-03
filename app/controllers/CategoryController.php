@@ -19,8 +19,7 @@ class CategoryController extends Controller{
  
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+ 
         $category=new Category();
         
         $category->name=$_POST['name'];
@@ -37,11 +36,32 @@ class CategoryController extends Controller{
         $this->view('feedback',['danger'=>'can not add data']);
 
     }
-    function edit(){
-            $this->view('edit_category');
+    public function getBody(){
+        $category = new Category();  
+        $category->name=$_POST['name'];
+        $imageName=$this->uploadFile($_FILES['image']);
+        $category->image=$imageName!=null?$imageName:"default.png";
+        $category->created_by=1;
+        $category->is_active=$_POST['is_active'];
+        return $category;
     }
-    function update(){
-
+    
+    function update($params=[]){
+        if($_SERVER['REQUEST_METHOD'] === "GET"){
+            $cat=new Category();
+            $result=$cat->getSingleRow($params['id']);
+            $this->view('edit_category',$result);
+        }
+        elseif($_SERVER['REQUEST_METHOD'] === "POST"){
+            $category = $this->getBody();
+            $category->update($_POST['id']);
+            $this->redirect('/categories');
+        }
+    }
+    public function delete_or_recovery($params=[]){
+        $category=new Category();
+        $category->remove_or_recovery($params['id']);
+        $this->redirect('/categories');
     }
     public function remove(){
 

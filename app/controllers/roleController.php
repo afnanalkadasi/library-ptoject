@@ -24,8 +24,7 @@ class roleController extends Controller{
  
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+       
         $role=new role();
         
         $role->name=$_POST['name'];

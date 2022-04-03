@@ -179,7 +179,7 @@
     </a>
     <ul class="menu-sub">
       <li class="menu-item">
-        <a href="/dashboards-ecommerce" class="menu-link">
+        <a href="/admin/dashboards-ecommerce" class="menu-link">
           <div data-i18n="eCommerce">eCommerce</div>
         </a>
       </li>
@@ -352,11 +352,7 @@
       <div data-i18n="الطلب">الطلب</div>
     </a>
     <ul class="menu-sub">
-    <li class="menu-item">
-        <a href="/admin/add_order" class="menu-link">
-          <div data-i18n="اضافة الطلب">اضافة الطلب</div>
-        </a>
-      </li>
+   
       <li class="menu-item">
         <a href="/admin/orders" class="menu-link">
           <div data-i18n="عرض الطلب">عرض الطلب</div>
@@ -371,11 +367,7 @@
       <div data-i18n="تفاصيل الطلب">تفاصيل الطلب</div>
     </a>
     <ul class="menu-sub">
-    <li class="menu-item">
-        <a href="/admin/add_orderdetails" class="menu-link">
-          <div data-i18n="اضافة تفاصيل الطلب">اضافة تفاصيل الطلب</div>
-        </a>
-      </li>
+  
       <li class="menu-item">
         <a href="/admin/orderdetails" class="menu-link">
           <div data-i18n="عرض تفاصيل الطلب"> عرض تفاصيل الطلب</div>
