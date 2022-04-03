@@ -35,8 +35,7 @@ class user_pay_MController extends Controller{
  
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+       
         $user_payment_method=new User_payment_method();
 
       

@@ -11,29 +11,29 @@ use coding\app\Models\User_address;
 class OrderController extends Controller{
 
    
-    function add_order(){
+    // function add_order(){
 
-        $users=new User();
-        $allusers =$users->getAll();
+    //     $users=new User();
+    //     $allusers =$users->getAll();
 
-        $user_payment_methods=new User_payment_method();
-        $alluser_payment_methods=$user_payment_methods->getAll();
+    //     $user_payment_methods=new User_payment_method();
+    //     $alluser_payment_methods=$user_payment_methods->getAll();
         
-        $user_addresses=new User_address();
-        $alluser_addresses =$user_addresses->getAll();
+    //     $user_addresses=new User_address();
+    //     $alluser_addresses =$user_addresses->getAll();
 
-            $data=[
-            "users" =>$allusers,
-            "user_payment_methods" =>$alluser_payment_methods,
-            "user_addresses" => $alluser_addresses
-            ];
+    //         $data=[
+    //         "users" =>$allusers,
+    //         "user_payment_methods" =>$alluser_payment_methods,
+    //         "user_addresses" => $alluser_addresses
+    //         ];
 
-        $this->view('add_order',$data);
-    }
+    //     $this->view('add_order',$data);
+    // }
 
-    function editorder(){
-        $this->view('edit_order');
-    }
+    // function editorder(){
+    //     $this->view('edit_order');
+    // }
     
     function listAll(){
         $orders=new Order();
@@ -45,8 +45,7 @@ class OrderController extends Controller{
  
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+       
         $order=new order();
 
      

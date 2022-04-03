@@ -14,12 +14,12 @@
                         <div class="modal-content_card">    
                               
                                         <p class="title_sal">
-                                             <img src="svg/cart.svg"><strong style="font-size: 30px; font-weight: 600;">السلة</strong>     (3 منتجات)   </p>                
+                                             <img src="../svg/cart.svg"><strong style="font-size: 30px; font-weight: 600;">السلة</strong>     (3 منتجات)   </p>                
                                         <div class="sal-container">
                                                         <div class="big_it"> 
                                                         <div class="item1">
                                                                 <div class="chil_1" >
-                                                                        <img src="img/book (1).jpg" width="40px" height="50px">
+                                                                        <img src="../images/book (1).jpg" width="40px" height="50px">
                                                                 </div>
         
                                                                 <div class="chil_2">
@@ -59,7 +59,7 @@
                                                        <div class="big_it">                                                     
                                                         <div class="item2">
                                                                                 <div class="chil_1" >
-                                                                                        <img src="img/book (2).jpg" width="40px" height="50px">
+                                                                                        <img src="../images/book (2).jpg" width="40px" height="50px">
                                                                                 </div>
                         
                                                                                 <div class="chil_2">
@@ -98,7 +98,7 @@
                                                 <div class="big_it">                   
                                                         <div class="item3">
                                                                         <div class="chil_1" >
-                                                                                        <img src="img/book (3).jpg" width="40px" height="50px">
+                                                                                        <img src="../images/book (3).jpg" width="40px" height="50px">
                                                                                 </div>
                         
                                                                                 <div class="chil_2">

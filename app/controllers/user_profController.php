@@ -25,8 +25,7 @@ class user_profController extends Controller{
  
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+       
         $user_profile=new User_profile();
         
         $user_profile->phone=$_POST['phone'];

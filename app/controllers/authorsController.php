@@ -17,8 +17,7 @@ class AuthorsController extends Controller{
  
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+    
         $author=new Author();
         
         $author->name=$_POST['name'];

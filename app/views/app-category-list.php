@@ -517,6 +517,7 @@
             <a href="/admin/edit_category/<?php echo $category['id'];?>" class="btn btn-icon btn-outline-dribbble">
                 <i class="tf-icons bx bx-edit-alt me-1"></i>
               </a>
+              
               <button type="button" class="btn btn-icon btn-outline-dribbble">
                 <i class="tf-icons bx bx-trash me-1"></i>
               </button>

@@ -37,7 +37,7 @@ $system=new AppSystem($config);
 Router::get('/', [HomeController::class, 'index']);
 Router::get('/sal', [HomeController::class, 'sal']);
 Router::get('/category', [HomeController::class, 'category']);
-Router::get('/details', [HomeController::class, 'details']);
+Router::get('/details/{id}', [HomeController::class, 'details']);
 Router::get('/checkout', [HomeController::class, 'checkout']);
 Router::get('/login', [HomeController::class, 'login']);
 Router::get('/sign_up', [HomeController::class, 'sign_up']);
@@ -52,10 +52,10 @@ Router::post('/admin/update_user',[UsersController::class,'update']);
 #########################categories#######################
 Router::get('/admin/categories',[CategoryController::class,'listAll']);
 Router::get('/admin/add_category',[CategoryController::class,'add_category']);
-Router::get('/admin/edit_category',[CategoryController::class,'edit']);
+Router::get('/admin/edit_category/{id}',[CategoryController::class,'update']);
+Router::get('/admin/edit_category',[CategoryController::class,'update']);
 Router::get('/admin/remove_category',[CategoryController::class,'remove']);
 Router::post('/admin/save_category',[CategoryController::class,'store']);
-Router::post('/admin/update_category',[CategoryController::class,'update']);
 #########################user_payment_methods#######################
 Router::get('/admin/user_payment_ms',[user_pay_MController::class,'listAll']);
 Router::get('/admin/add_user_payment',[user_pay_MController::class,'add_user_payment']);
@@ -100,15 +100,12 @@ Router::post('/admin/save_offer',[OfferController::class,'store']);
 Router::post('/admin/update_offer',[OfferController::class,'update']);
 #########################orders#######################
 Router::get('/admin/orders',[OrderController::class,'listAll']);
-Router::get('/admin/add_order',[OrderController::class,'add_order']);
 Router::get('/admin/edit_order',[OrderController::class,'editorder']);
 Router::get('/admin/remove_order',[OrderController::class,'remove']);
 Router::post('/admin/save_order',[OrderController::class,'store']);
 Router::post('/admin/update_order',[OrderController::class,'update']);
 #########################orderdetails#######################
 Router::get('/admin/orderdetails',[orderdetailsController::class,'listAll']);
-Router::get('/admin/add_orderdetails',[orderdetailsController::class,'add_orderdetails']);
-Router::get('/admin/edit_orderdetails',[orderdetailsController::class,'editorderdetails']);
 Router::get('/admin/remove_orderdetails',[orderdetailsController::class,'remove']);
 Router::post('/admin/save_orderdetails',[orderdetailsController::class,'store']);
 Router::post('/admin/update_orderdetails',[orderdetailsController::class,'update']);

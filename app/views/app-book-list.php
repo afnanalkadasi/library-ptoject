@@ -491,13 +491,14 @@
             <th>عنوان الكتاب</th>
             <th>الصورة</th>
             <th>السعر</th>
-            <th>الوصف</th>
+            
             <th>القسم</th>
             <th>الكاتب</th>
             <th>الناشر</th>
             <th>عدد الصفحات</th>
             <th>الكمية</th>
             <th>الصيغة</th>
+            <th>الوصف</th>
             <th>انشى بواسطة</th>
             <th>الحالة</th>
             <th>العمليات</th>
@@ -514,13 +515,14 @@
               <img class="img-fluid rounded" height="150px" width="150px" src="images/<?= $book['image'];?>">
             </td>
             <td><?= $book['price'];?></td>
-            <td><?= $book['description'];?></td>
+            
             <td><?= $book['category_id'];?></td>
             <td><?= $book['author_id'];?></td>
             <td><?= $book['publisher_id'];?></td>
             <td><?= $book['pages_number'];?></td>
             <td><?= $book['quantity'];?></td>
             <td><?= $book['format'];?></td>
+            <td><?= $book['description'];?></td>
             <td><?= $book['created_by'];?></td>
             <td>
             <?php if($book['is_active']==1) {?>    

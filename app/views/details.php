@@ -20,7 +20,7 @@
                                         <li><a href="#">الرئيسية</a></li>
                                         <li><a href="#">الكتب العربية</a></li>
                                         <li><a href="#">    كتب الكترونية </a></li>
-                                        <li>  لأنك الله (كتاب إلكتروني)</li>
+                                        <li> <?php echo $params->title ?> (<?php echo $params->format ?>)</li>
                         </ul>
                       
                 <div class="row">
@@ -28,18 +28,18 @@
                                                 <div class="div_ch">
  
                                                                 <div class="column_im2">
-                                                                   <img src="img/book (1).jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                                                                   <img src="../images/<?php echo $params->image ?>" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
                                                                  </div>
 
                                                                  <div class="row_im">
                                                                                 <div class="column_im2">
-                                                                                  <img class="demo cursor" src="img/book (1).jpg" style="width:100%"  onclick="openModal();currentSlide(1)">
+                                                                                  <img class="demo cursor" src="../images/book (1).jpg" style="width:100%"  onclick="openModal();currentSlide(1)">
                                                                                 </div>
                                                                                 <div class="column_im2">
-                                                                                  <img class="demo cursor" src="img/book (2).jpg" style="width:100%"  onclick="openModal();currentSlide(2)" >
+                                                                                  <img class="demo cursor" src="../images/book (2).jpg" style="width:100%"  onclick="openModal();currentSlide(2)" >
                                                                                 </div>
                                                                                 <div class="column_im2">
-                                                                                  <img class="demo cursor" src="img/book (3).jpg" style="width:100%"  onclick="openModal();currentSlide(3)" >
+                                                                                  <img class="demo cursor" src="../images/book (3).jpg" style="width:100%"  onclick="openModal();currentSlide(3)" >
                                                                                 </div>
                                                                 </div>
                                                 </div>
@@ -49,15 +49,15 @@
                                                                  <div class="modal-content_im">
                                                                
                                                                    <div class="mySlides_im">
-                                                                     <img src="img/book (1).jpg" style="width:100%">
+                                                                     <img src="images/book (1).jpg" style="width:100%">
                                                                    </div>
                                                                
                                                                    <div class="mySlides_im">
-                                                                     <img src="img/book (2).jpg" style="width:100%">
+                                                                     <img src="images/book (2).jpg" style="width:100%">
                                                                    </div>
                                                                
                                                                    <div class="mySlides_im">
-                                                                     <img src="img/book (3).jpg" style="width:100%">
+                                                                     <img src="images/book (3).jpg" style="width:100%">
                                                                    </div>
                                                                 
                                                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -65,13 +65,13 @@
                                                                
                                                                <div class="line_im"></div>
                                                                    <div class="column_im">
-                                                                     <img class="demo cursor" src="img/book (1).jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                                                                     <img class="demo cursor" src="../images/book (1).jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
                                                                    </div>
                                                                    <div class="column_im">
-                                                                     <img class="demo cursor" src="img/book (2).jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                                                                     <img class="demo cursor" src="../images/book (2).jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
                                                                    </div>
                                                                    <div class="column_im">
-                                                                     <img class="demo cursor" src="img/book (3).jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                                                                     <img class="demo cursor" src="../images/book (3).jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
                                                                    </div>
                                                                  </div>
                                                                </div>
@@ -79,9 +79,9 @@
                                 </div>
                                 <div class="div2">
                                       <div class="ch_div2">
-                                          <h2> لأنك الله (كتاب إلكتروني)</h2>
-                                        <a>عرض المزيد<img src="svg/svgexport-51.svg" width="15px" height="15px"></a>
-                                        <br> <strong class="price">19.39ر.س.</strong>
+                                          <h2> <?php echo $params->title ?></h2>
+                                        <a>عرض المزيد<img src="../svg/svgexport-51.svg" width="15px" height="15px"></a>
+                                        <br> <strong class="price"><?php echo $params->price ?>ر.س</strong>
                                     <p class="p_lig">شامل الضريبة</p>
                                       </div>
                                       <div class="ch_div2_l">
@@ -96,7 +96,7 @@
                                           <a>(15 المراجعات)</a>
                                          </div>
                                          <div class="p_lig">
-                                           رقم الصنف JBB410156 &nbsp; &nbsp; رقم المتج 4
+                                           رقم الصنف JBB410156 &nbsp; &nbsp; رقم المتج <?php echo $params->id ?>
                                          </div>
                                       </div>
                                        <h4> الصيغ المتوفرة</h4>
@@ -131,19 +131,19 @@
                                                         </select>
                                                 
                                                       <div>
-                                                         <a href="/sal">   <button class="add_bt add_card"><img  src="svg/cart-1.svg" style="margin-left: 5px;">اضف الى السلة</button></a>
+                                                         <a href="/sal">   <button class="add_bt add_card"><img  src="../svg/cart-1.svg" style="margin-left: 5px;">اضف الى السلة</button></a>
                                                       </div>
                                                 </div>
                                                 <div class="ico_bt">
-                                                    <span><img src="svg/svgexport-23 (2).svg" > تسوق آمن<img src="svg/svgexport-9 (2).svg" ></span>
-                                                    <span><img src="svg/svgexport-10 (2).svg" > أصلي ومضمون<img src="svg/svgexport-9 (2).svg" ></span>
-                                                    <span><img src="svg/svgexport-24 (2).svg" > شحن سريع ومجاني<img src="svg/svgexport-9 (2).svg" ></span>
+                                                    <span><img src="../svg/svgexport-23 (2).svg" > تسوق آمن<img src="../svg/svgexport-9 (2).svg" ></span>
+                                                    <span><img src="../svg/svgexport-10 (2).svg" > أصلي ومضمون<img src="../svg/svgexport-9 (2).svg" ></span>
+                                                    <span><img src="../svg/svgexport-24 (2).svg" > شحن سريع ومجاني<img src="../svg/svgexport-9 (2).svg" ></span>
                                                 </div>
                                                         <hr>
                                                       <div class="div3_d2">
-                                                          <button class="bt_svg"><img src="svg/svgexport-31 (1).svg" >مشاركة</button>
-                                                          <button class="bt_svg"><img src="svg/svgexport-3 (2).svg" >المفضلة</button>
-                                                          <button class="bt_svg"><img src="svg/svgexport-55.svg" width="17px" height="17px" >مقارنة</button>
+                                                          <button class="bt_svg"><img src="../svg/svgexport-31 (1).svg" >مشاركة</button>
+                                                          <button class="bt_svg"><img src="../svg/svgexport-3 (2).svg" >المفضلة</button>
+                                                          <button class="bt_svg"><img src="../svg/svgexport-55.svg" width="17px" height="17px" >مقارنة</button>
                                                       </div>
                                         </div>
                                        
@@ -153,7 +153,7 @@
      </section>
      <section class="section_div">
        <p>
-         كتاب يتحدث عن بعض أسماء الله الحسنى وكيف نعيشها في حياتنا حرص المؤلف أن يكون الكتاب مناسبا للمحتاج والمريض والسليم
+        <?php echo $params->description ?>
        </p>
      </section>
    
@@ -167,15 +167,15 @@
                                           </tr>
                                           <tr>
                                             <td>رقم المنتج</td>
-                                            <td>4</td>
+                                            <td><?php echo $params->id ?></td>
                                           </tr>
                                           <tr>
                                             <td>المولف</td>
-                                            <td>علي جابر الفيفي</td>
+                                            <td> <?php echo $params->author_id ?></td>
                                           </tr>
                                           <tr>
                                                         <td>الناشر</td>
-                                                        <td>  دار الحضارة للنشر والتوزيع</td>
+                                                        <td> <?php echo $params->publisher_id ?> </td>
                                            </tr>
                                            <tr>
                                                         <td>تاريخ النشر</td>
@@ -183,11 +183,11 @@
                                             </tr>
                                             <tr>
                                                         <td>صيغة الكتاب</td>
-                                                        <td>Ebook</td>
+                                                        <td><?php echo $params->format ?></td>
                                         </tr>
                                         <tr>
                                                         <td> عدد الصفحات</td>
-                                                        <td>  182</td>
+                                                        <td>  <?php echo $params->pages_number ?></td>
                                         </tr>
                                         <tr>
                                                         <td> وزن الشحن(كجم)</td>
@@ -204,7 +204,7 @@
                                         </table>
                                       </div>
                                       <div class="btn_to">
-                                        عرض اقل  <img src="svg/svgexport-31 (2).svg" width="15px" height="15px">
+                                        عرض اقل  <img src="../svg/svgexport-31 (2).svg" width="15px" height="15px">
                                       </div>
                 </section>
                 <hr>
@@ -265,7 +265,7 @@
   <h2 class="section-title" > منتجات مشابهة</h2>
   <div class="row ">
       <div class="card_sal">
-            <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
+            <a href="/details"><img class="im_book" src="../images/book (1).jpg" ></a>  
               <h1>الصلاة وحكم تاركها</h1>
               <br>  <br>
                <strong class="price">19.39ر.س.</strong>
@@ -274,7 +274,7 @@
              
       </div>
       <div class="card_sal">
-               <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a> 
+               <a href="/details"><img class="im_book" src="../images/book (1).jpg" ></a> 
               <h1>الله</h1>
               <br>  <br>
                <strong class="price">19.39ر.س.</strong>
@@ -284,7 +284,7 @@
       </div>
 
       <div class="card_sal">
-              <img class="im_book" src="img/book (1).jpg" >
+              <img class="im_book" src="../images/book (1).jpg" >
               <h1>علامات القيامة الكبرى مجلد مقاس صغير</h1>
              
                <strong class="price">19.39ر.س.</strong>
@@ -294,7 +294,7 @@
       </div>
 
       <div class="card_sal">
-              <img class="im_book" src="img/book (1).jpg" >
+              <img class="im_book" src="../images/book (1).jpg" >
               <h1>ويبدا العد التنازلي</h1>
               <br>  <br>
                <strong class="price">19.39ر.س.</strong>
@@ -303,7 +303,7 @@
            
       </div>
       <div class="card_sal">
-                  <img class="im_book" src="img/book (1).jpg" >
+                  <img class="im_book" src="../images/book (1).jpg" >
                   <h1>(ضعف الامة النفسية المشكلة )</h1>
                  
                    <strong class="price">19.39ر.س.</strong>
@@ -311,7 +311,7 @@
                
           </div>
           <div class="card_sal">
-              <img class="im_book" src="img/book (1).jpg" >
+              <img class="im_book" src="../images/book (1).jpg" >
               <h1>جهنم الصغرى</h1>
              <br>  <br>
                <strong class="price">19.39ر.س.</strong>

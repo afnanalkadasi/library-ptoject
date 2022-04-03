@@ -20,8 +20,7 @@ class CityController extends Controller{
  
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+
         $city=new City();
         
         $city->name=$_POST['name'];

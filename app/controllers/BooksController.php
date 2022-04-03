@@ -45,8 +45,7 @@ class BooksController extends Controller{
  
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+  
         $book=new Book();
 
         $imageName=$this->uploadFile($_FILES['image']);

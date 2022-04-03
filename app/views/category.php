@@ -55,405 +55,46 @@
                             </div>
                         </div>
                         
-                        <div class="card_sal book_card">
-                                <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                                 <div class="card_im" > <img src="svg/svgexport-990.svg" width="20px" height="20px" ><h2 >كتاب إلكتروني</h2></div>
-                                  <span> كلي ونامي وابهري الاخرين</span>
-                                  <br><br>
-                                  <strong class="price">ر.س.24.99</strong>
-                                  <p>شامل الضريبة</p>
-                                  <span>صيغ أخرى:</span>
-                                  <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-                                  <div >
-                                      <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                      <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                                      <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                  </div>    
-                </div>
-                                <div class="card_sal book_card">
-                                        <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                                         <div class="card_im" > <img src="svg/svgexport-990.svg" width="20px" height="20px" ><h2 >كتاب إلكتروني</h2></div>
-                                                <i class="fa fa-star check " ></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <br>
-                                          <span>ن النسوية(كتاب إلكتروني)</span>
-                                          <br><br>
-                                          <strong class="price">ر.س.34.99</strong>
-                                          <p>شامل الضريبة</p>
-                                          <span>صيغ أخرى:</span>
-                                          <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-                                          <div >
-                                              <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                              <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                                              <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                          </div>    
-                        </div>
-                        <div class="card_sal book_card">
-                                <a href="/details"><img  class="im_book"  src="img/book (1).jpg" ></a>  
-                                  <h1>كتاب إلكتروني</h1>
-                                  <span>ابـابيـل(كتاب الـكتـروني)</span>
-                                  <br><br>
-                                  <strong class="price">ر.س.49.99</strong>
-                                  <p>شامل الضريبة</p>
-                                  <span>صيغ أخرى:</span>
-                                  <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-                                  <div >
-                                      <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                      <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                                      <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                  </div>    
-                </div>
+                        <?php foreach($params['books'] as $book){?>
+                                        <div class="card_sal">
+                                                <a href="/details"><img class="im_book" src="images/<?= $book['image'];?>" ></a> 
+                                               <div class="card_im" > <img src="svg/svgexport-990.svg" width="20px" height="20px" ><h2 > <?= $book['format'];?> </h2></div>
+                                            <span><?= $book['title'];?> </span>
+                                            <br><br>
+                                                 <strong class="price"><?= $book['price'];?>ر.س</strong>
+                                                <p>شامل الضريبة</p>
+                                                <span>صيغ أخرى:</span>
+                                                <a style="color: blue; font-size: 18px; font-weight: bold;">  <?= $book['format'];?></a>
+                                                <div >
+                                                    <button class="card_icon2"><img src="svg/svgexport-54.svg"></button>
+                                                       <a href="/sal"> <button class="card_icon  add_card"><img  src="svg/cart-1.svg" ></button></a> 
+                                                    <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
+                                                </div>
+                                        </div>
+
+                  <?php } ?> 
+
+                      
+                            
+                        
               
-                                <div class="card_sal book_card">
-                                                <a href="/details"><img class="im_book"  src="img/book (1).jpg" ></a>  
-                                                 <div class="card_im" > <img src="svg/svgexport-990.svg" width="20px" height="20px" ><h2 >كتاب إلكتروني</h2></div>
-                                                 <i class="fa fa-star check " ></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <br>
-                                                  <span>لانك الله (كتاب الكتروني)</span>
-                                                  <br>
-                                                  <br>
-                                                  <strong class="price">ر.س.12.99</strong>
-                                                  <p>شامل الضريبة</p>
-                                                  <span>صيغ أخرى:</span>
-                                                  <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-                                                  <div >
-                                                      <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                                      <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                                                      <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                                  </div>    
-                                </div>
+                            
                                 <div class=" book_card">
                                   
                          </div>            
-                                <div class="card_sal book_card">
-                                        <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                                         <div class="card_im" > <img src="svg/svgexport-990.svg" width="20px" height="20px" ><h2 >كتاب إلكتروني</h2></div>
-                                          <span>(كتاب الكتروني)تخاريف ساخرة</span>
-                                          <br><br>
-                                           <strong class="price">19.39ر.س.</strong>
-                                          <p>شامل الضريبة</p>
-                                          <div >
-                                              <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                              <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                                              <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                          </div>    
-                        </div>
-
-
-                   <div class="card_sal book_card">
-                                                <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                                                 <div class="card_im" > <img src="svg/svgexport-990.svg" width="20px" height="20px" ><h2 >كتاب إلكتروني</h2></div>
-                                                 <i class="fa fa-star check " ></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <br>
-      
-                                                  <span>(كتاب الكتروني)شمس المعارف</span>
-                                                  <br><br>
-                                                   <strong class="price">19.39ر.س.</strong>
-                                                  <p>شامل الضريبة</p>
-                                                  <div >
-                                                      <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                                      <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                                                      <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                                  </div>    
-                                </div>
-                                <div class="card_sal book_card">
-                                        <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                                         <div class="card_im" > <img src="svg/svgexport-990.svg" width="20px" height="20px" ><h2 >كتاب إلكتروني</h2></div>
-                                          <span>(كتاب الكتروني)مستقبل النسوية</span>
-                                          <br><br>
-                                           <strong class="price">19.39ر.س.</strong>
-                                          <p>شامل الضريبة</p>
-                                          <span>صيغ أخرى:</span>
-                                          <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-                                          <div >
-                                              <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                              <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                                              <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                          </div>    
-                        </div>
-              
-                                <div class="card_sal book_card">
-                                        <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                                         <div class="card_im" > <img src="svg/svgexport-990.svg" width="20px" height="20px" ><h2 >كتاب إلكتروني</h2></div>
-                                         <i class="fa fa-star check " ></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <br>
-                                          <span>فكرة يجب ان تعرفهاعن علم النفس </span>
-                                          <br><br>
-                                          
-                                           <strong class="price">19.39ر.س.</strong>
-                                          <p>شامل الضريبة</p>
-                                          <span>صيغ أخرى:</span>
-                                          <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-                                          <div >
-                                              <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                              <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                                              <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                          </div>    
-                        </div>
+                       
+                            
                 <div class="cate12 book_card"></div>
-                <div class="card_sal book_card">
-                                <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                                  <h1>كتاب إلكتروني</h1>
-                                  <i class="fa fa-star  " ></i>
-                                  <i class="fa fa-star "></i>
-                                  <i class="fa fa-star "></i>
-                                  <i class="fa fa-star "></i>
-                                  <i class="fa fa-star "></i>
-                                  <br>
-                                  <span>احمد ورحلة الصف (كتاب الكتروني)</span>
-                                  <br><br>
-                                   <strong class="price">19.39ر.س.</strong>
-                                  <p>شامل الضريبة</p>
-                                  <div >
-                                      <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                      <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                                      <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                  </div>    
-                </div>
-                <div class="card_sal book_card">
-                                <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                                  <h1>كتاب إلكتروني</h1>
-                                  <span>غدا اجمل (كتاب الكتروني) </span>
-                                  <br><br>
-                                   <strong class="price">19.39ر.س.</strong>
-                                  <p>شامل الضريبة</p>
-                                  <span>صيغ أخرى:</span>
-                                  <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-                                  <div >
-                                      <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                                                            <a href="/sal"> <button class="card_icon"><img  src="svg/cart-1.svg" ></button></a> 
-                                      <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                  </div>    
-                </div>
-                <div class="card_sal book_card">
-                                <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                                  <h1>كتاب إلكتروني</h1>
-                                  <span>البداية والنهاية الجزء الاول</span>
-                                  <br><br>
-                                   <strong class="price">19.39ر.س.</strong>
-                                  <p>شامل الضريبة</p>
-                                  <span>صيغ أخرى:</span>
-                                  <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-                                  <div >
-
-                                      <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                      <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                                      <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                  </div>    
-                </div>
-             
-                <div class="card_sal book_card">
-                                <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                                  <h1>كتاب إلكتروني</h1>
-                                  <span>اربعون(كتاب الكتروني)</span>
-                                  <br><br>
-                                   <strong class="price">19.39ر.س.</strong>
-                                  <p>شامل الضريبة</p>
-                                  <div >
-                                      <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                                      <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                                      <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                                  </div>    
-                </div>
+                
                 <div class=" book_card">
                    
          </div>
-                <div class="card_sal book_card">
-                        <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                          <h1>كتاب إلكتروني</h1>
-                          <i class="fa fa-star  " ></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <br>
-                          <span>عملية الحصول على العمل (كتاب الكتروني)</span>
-                          <br><br>
-                           <strong class="price">19.39ر.س.</strong>
-                          <p>شامل الضريبة</p>
-                          <span>صيغ أخرى:</span>
-                          <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-                          <div >
-                              <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                              <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                              <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                          </div>    
-        </div>
-        <div class="card_sal book_card">
-                <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-                  <h1>كتاب إلكتروني</h1>
-                  <i class="fa fa-star  " ></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <br>
-                  <span>الحصضور التنفيذي (كتاب الكتروني)</span>
-                  <br><br>
-                   <strong class="price">19.39ر.س.</strong>
-                  <p>شامل الضريبة</p>
-                  <span>صيغ أخرى:</span>
-                  <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-                 
-                  <div >
-                      <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-                      <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-                      <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-                  </div>    
-</div>
-<div class="card_sal book_card">
-        <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-          <h1>كتاب إلكتروني</h1>
- 
-          <span>  (كتاب الكتروني)فن اللامبالاة </span>
-          <br><br>
-           <strong class="price">19.39ر.س.</strong>
-          <p>شامل الضريبة</p>
-          <span>صيغ أخرى:</span>
-          <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-          <div >
-              <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-              <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-              <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-          </div>    
-</div>
-
-<div class="card_sal book_card">
-        <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-          <h1>كتاب إلكتروني</h1>
-          <i class="fa fa-star  " ></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <i class="fa fa-star "></i>
-                                                 <br>
-          <span>why the third floor  (كتاب الكتروني)</span>
-          <br><br>
-           <strong class="price">19.39ر.س.</strong>
-          <p>شامل الضريبة</p>
-          <div >
-              <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-              <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-              <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-          </div>             
-</div>
+                
 <div class=" book_card">
         <br>
         <br>
 </div>
-<div class="card_sal book_card">
-        <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-          <h1>كتاب إلكتروني</h1>
 
-          <span>انت كل اشيائي الجميلة  (كتاب الكتروني)</span>
-          <br><br>
-           <strong class="price">19.39ر.س.</strong>
-          <p>شامل الضريبة</p>
-          <span>صيغ أخرى:</span>
-          <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-         
-          <div >
-              <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-              <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-              <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-          </div>    
-</div>
-<div class="card_sal book_card">
-        <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-          <h1>كتاب إلكتروني</h1>
-          <i class="fa fa-star check " ></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <br>
-          <span>عودة شيرلوك هولمز  (كتاب الكتروني)</span>
-          <br><br>
-           <strong class="price">19.39ر.س.</strong>
-          <p>شامل الضريبة</p>
-          <span>صيغ أخرى:</span>
-          <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-         
-          <div >
-              <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-              <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-              <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-          </div>    
-</div>
-<div class="card_sal book_card">
-        <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-          <h1>كتاب إلكتروني</h1>
-          <i class="fa fa-star check " ></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <i class="fa fa-star check"></i>
-                                                 <br>
-          <span>ليتها تسال  (كتاب الكتروني)</span>
-          <br><br>
-          <strong class="price">ر.س.29.99</strong>
-          <p>شامل الضريبة</p>
-          <div >
-              <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-              <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-              <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-          </div>    
-</div>
-<div class="card_sal book_card">
-        <a href="/details"><img class="im_book" src="img/book (1).jpg" ></a>  
-          <h1>كتاب إلكتروني</h1>
-          <i class="fa fa-star check " ></i>
-          <i class="fa fa-star check"></i>
-          <i class="fa fa-star check"></i>
-          <i class="fa fa-star check"></i>
-          <i class="fa fa-star check"></i>
-          <br>
-          <span>مغامرات شيرلوك هولموز(كتاب الكتروني)   (كتاب الكتروني)</span>
-          <br><br>
-           <strong class="price">19.39ر.س.</strong>
-          <p>شامل الضريبة</p>
-          <span>صيغ أخرى:</span>
-          <a style="color: blue; font-size: 18px; font-weight: bold;"> كتاب مطبوع</a>
-          <div >
-              <button class="card_icon2" ><img src="svg/svgexport-54.svg"></button>
-              <a href="/sal"> <button class="card_icon add_card"><img  src="svg/cart-1.svg" ></button></a> 
-              <button class="card_icon2"><img src="svg/svgexport-55.svg" ></button>
-          </div>    
-        </div>
-        <div class="cate22">
-           
-            </div> 
-            <div class="cate21">
-                    عرض المزيد
-                   
-                </div>  
-          
-   
-        <div class="cate23">
-             
-            </div>  
-            
-                <div class="cate25">
-             اشتر من كتب إلكترونية على متجر جرير الإلكتروني
-                    </div>   
-
-                        </div>    
-</div>
 
               
 </section>
