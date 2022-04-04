@@ -398,91 +398,100 @@
 
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
-  <form class="card-body" action="/save_user" method="POST">
-    <div class="row g-3">
-      <div class="col-md-6">
-        <label class="form-label" for="multicol-username">عنوان الكتاب</label>
-        <input name="title" type="text" id="multicol-username" class="form-control" placeholder="" />
-      </div>
-      <div class="col-md-6">
-          <label for="formFile" class="form-label">الصورة</label>
-          <input class="form-control" name="image" type="file" id="formFile">
-        </div>
-      <div class="col-md-6">
-        <label class="form-label" for="multicol-pages_number">رقم الصفحات</label>
-        <input name="pages_number" type="number" id="multicol-pages_number" class="form-control" placeholder="" />
-      </div>
-     
-    
-      <div class="col-md-6">
-        <label class="form-label" for="multicol-username">سعر الكتاب</label>
-        <input name="price" type="number" id="multicol-phone" class="form-control" placeholder="" />
-      </div>
-      <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
-      <label class="form-label" for="multicol-email">  القسم</label>
-                    <select name="category_id" class="form-select item-details mb-2">
-                      <option selected disabled>Select Item</option>
-                      <option value="App Design">App Design</option>
-                      <option value="App Customization">App Customization</option>
-                      <option value="ABC Template">ABC Template</option>
-                      <option value="App Development">App Development</option>
-                    </select>
-      </div>
-      <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
-      <label class="form-label" for="multicol-email"> الكاتب</label>
-                    <select name="author_id" class="form-select item-details mb-2">
-                      <option selected disabled>Select Item</option>
-                      <option value="App Design">App Design</option>
-                      <option value="App Customization">App Customization</option>
-                      <option value="ABC Template">ABC Template</option>
-                      <option value="App Development">App Development</option>
-                    </select>
-      </div>
-      <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
-      <label class="form-label" for="multicol-email"> الناشر</label>
-                    <select name="publisher_id" class="form-select item-details mb-2">
-                      <option selected disabled>Select Item</option>
-                      <option value="App Design">App Design</option>
-                      <option value="App Customization">App Customization</option>
-                      <option value="ABC Template">ABC Template</option>
-                      <option value="App Development">App Development</option>
-                    </select>
-      </div>
-      <div class="col-md-6">
-        <label class="form-label" for="multicol-country">الكمية</label>
-        <input name="quantity" type="number" id="multicol-country" class="form-control" placeholder="" />
-      </div>	
-      <div class="col-md-6">
-        <label class="form-label" for="multicol-format">الصيغة</label>
-        <input name="format" type="text" id="multicol-format" class="form-control" placeholder="" />
-      </div>
-      <div class="col-md-6">
-        <div class="form-password-toggle">
-          <label class="form-label" for="multicol-confirm-password">الحالة</label>
-          <div class="input-group input-group-merge">
-          <label class="switch">
-              <input name="is_active" value=1 type="checkbox" checked class="switch-input" />
-              <span class="switch-toggle-slider">
-                <span class="switch-on"></span>
-                <span class="switch-off"></span>
-              </span>
-              <span class="switch-label"> مفعل </span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div>
-          <label for="exampleFormControlTextarea1" class="form-label">الوصف</label>
-          <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-    </div>
-    
-    
-    <div class="pt-4">
-      <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
-      <button type="reset" class="btn btn-label-secondary">Cancel</button>
-    </div>
-  </form>
+<form class="card-body" action="/admin/edit_book" method="POST" enctype="multipart/form-data"> 
+                <input type="hidden" name="id" value="<?= $params['book']->id ?>">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="multicol-book-title">اسم الكتاب</label>
+                    <input name="title" type="text" id="multicol-book-title" value="<?= $params['book']->title ?>" class="form-control" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="multicol-email">صورة الكتاب</label>
+                    <div class="input-group input-group-merge">
+                      <input  name="image" type="file"  class="form-control"  aria-describedby="multicol-email2" />    
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="multicol-book-price">سعر الكتاب</label>
+                    <input name="price" type="number" id="multicol-book-price" value="<?= $params['book']->price ?>" class="form-control" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="multicol-book-pages">عدد صفحات الكتاب</label>
+                    <input name="pages_number" type="number" id="multicol-book-pages" value="<?= $params['book']->pages_number ?>" class="form-control" />
+                  </div>
+                  <div class="col-md-6" data-select2-id="48">
+                    <label for="categories" class="form-label">القسم</label>
+                    <div class="position-relative" data-select2-id="47">
+                      <select name="categories" id="categories" class="select2 form-select select2-hidden-accessible" data-select2-id="categories" tabindex="-1" aria-hidden="true">
+                        <option disabled selected>اختر قسم</option>
+                        <?php foreach ($params['categories'] as $category){ ?>
+                          <option <?php if ($category['id'] === $params['book']->category_id) echo "selected"?> value="<?= $params['book']->category_id ?>"
+                          >
+                                <?= $category['name'] ?>
+                          </option>
+                        <?php } ?>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6" data-select2-id="48">
+                    <label for="authors" class="form-label">الكاتب</label>
+                    <div class="position-relative" data-select2-id="47">
+                      <select name="authors" id="authors" class="select2 form-select select2-hidden-accessible" data-select2-id="authors" tabindex="-1" aria-hidden="true">
+                        
+                        <?php foreach ($params['authors'] as $author){ ?>
+                          <option <?php if ($author['id'] === $params['book']->author_id) echo "selected"?> value="<?= $params['book']->author_id ?>"
+                          >
+                                <?= $author['name'] ?>
+                          </option>
+                        <?php } ?>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6" >
+                    <label for="publishers" class="form-label">الناشر</label>
+                    <div class="position-relative" data-select2-id="47">
+                      <select name="publishers" id="publishers" class="select2 form-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                      <?php foreach ($params['publishers'] as $publish){ ?>
+                          <option <?php if ($publish['id'] === $params['book']->publisher_id) echo "selected"?> value="<?= $params['book']->publisher_id ?>" >
+                                <?= $publish['name'] ?>
+                          </option>
+                        <?php } ?>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="multicol-book-format">صيغة الكتاب</label>
+                    <input name="format" type="text" id="multicol-book-format" value="<?= $params['book']->format ?>" class="form-control" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="multicol-book-quantity">كمية الكتاب</label>
+                    <input name="quantity" type="text" id="multicol-book-quantity" value="<?= $params['book']->quantity ?>" class="form-control" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="book-description">وصف الكتاب</label>
+                    <textarea class="form-control" name="description" id="book-description" cols="3" rows="8"><?= $params['book']->description ?></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-password-toggle">
+                      <label class="form-label" for="multicol-confirm-password">تفعيل الكتاب</label>
+                      <div class="input-group input-group-merge">
+                      <label class="switch">
+                          <input name="is_active" value=1 type="checkbox" checked class="switch-input" />
+                          <span class="switch-toggle-slider">
+                            <span class="switch-on"></span>
+                            <span class="switch-off"></span>
+                          </span>
+                          <span class="switch-label">is active</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pt-4">
+                  <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
+                  <button type="reset" class="btn btn-label-secondary">Cancel</button>
+                </div>
+              </form>
 </div>
 
 

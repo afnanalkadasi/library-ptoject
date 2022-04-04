@@ -19,12 +19,7 @@ class user_pay_MController extends Controller{
                 ];
         $this->view('add_user_payment',$data);
     }
-    function edituser_payment(){
-        $this->view('edit_user_payment');
-    }
 
-    
-    // $user_payment_methodname=$this->con->real_escape_string($_POST['user_payment_method']);
     function listAll(){
         $user_payments=new User_payment_method();
         $alluser_payments=$user_payments->getAll();
@@ -37,8 +32,6 @@ class user_pay_MController extends Controller{
     function store(){
        
         $user_payment_method=new User_payment_method();
-
-      
         $user_payment_method->user_id=$_POST['users'];
         $user_payment_method->payement_id=$_POST['payements'];
         $user_payment_method->is_active=$_POST['is_active'];
@@ -52,11 +45,40 @@ class user_pay_MController extends Controller{
 
 
     }
-    function update(){
-
+    public function getBody(){
+        $user_payment_method=new User_payment_method();
+        $user_payment_method->user_id=$_POST['users'];
+        $user_payment_method->payement_id=$_POST['payements'];
+        $user_payment_method->is_active=$_POST['is_active'];
+   
+        return $user_payment_method;
     }
-    public function remove(){
+    
+    function update($params=[]){
+        if($_SERVER['REQUEST_METHOD'] === "GET"){
+            $user_payments=new User_payment_method();
+            $alluser_payments=$user_payments->getSingleRow($params['id']);
 
+            $users=new User();
+            $allusers=$users->getAll();
+    
+            $payements=new Payement();
+            $allpayements=$payements->getAll();
+
+            $data = array('payements' => $allpayements, 'users' => $allusers,'user_payments' => $alluser_payments);
+
+            $this->view('edit_user_payment',$data);
+        }
+        elseif($_SERVER['REQUEST_METHOD'] === "POST"){
+            $user_payments = $this->getBody();
+            $user_payments->update($_POST['id']);
+            $this->redirect('/admin/user_payment_ms');
+        }
+    }
+    public function delete_or_recovery($params=[]){
+        $user_payments=new User_payment_method();
+        $user_payments->remove_or_recovery($params['id']);
+        $this->redirect('/admin/user_payment_ms');
     }
 
 

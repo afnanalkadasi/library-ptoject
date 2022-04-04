@@ -92,6 +92,9 @@
 
           
 
+      
+          <!-- Quick links -->
+
           <!-- Notification -->
           <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
@@ -111,7 +114,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -147,7 +150,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="../assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -183,7 +186,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/9.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="../assets/img/avatars/9.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -219,7 +222,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/5.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="../assets/img/avatars/5.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -237,7 +240,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/6.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="../assets/img/avatars/6.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -283,7 +286,7 @@
           <li class="nav-item navbar-dropdown dropdown-user dropdown">
             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
               <div class="avatar avatar-online">
-                <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
               </div>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
@@ -292,7 +295,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0 me-3">
                       <div class="avatar avatar-online">
-                        <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                        <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
                       </div>
                     </div>
                     <div class="flex-grow-1">
@@ -388,41 +391,45 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             
             
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> تعديل المستخدم</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> تعديل مستخدم</h4>
 
 
 
 
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
-  <form class="card-body" action="/save_user" method="POST">
+  <form class="card-body" action="/admin/edit_user" method="POST">
+  <input type="hidden" name="id" value="<?= $params['users']->id ?>">
     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="multicol-username">اسم المستخدم</label>
-        <input name="name" type="text" id="multicol-username" class="form-control" placeholder="" />
+        <input name="name" type="text" value="<?= $params['users']->name ?>" id="multicol-username" class="form-control" placeholder="" />
       </div>
+    
       <div class="col-md-6">
         <label class="form-label" for="multicol-email">الايميل</label>
         <div class="input-group input-group-merge">
-          <input  name="email"type="text" id="multicol-email" class="form-control" placeholder="" aria-label="" aria-describedby="multicol-email2" />
+          <input  name="email"type="text"  value="<?= $params['users']->email ?>" id="multicol-email" class="form-control" placeholder="" aria-label="" aria-describedby="multicol-email2" />
           <span class="input-group-text" id="multicol-email2">@example.com</span>
         </div>
       </div>
       <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
-      <label class="form-label" for="multicol-email"> الصلاحية</label>
-                    <select class="form-select item-details mb-2">
-                      <option selected disabled>Select Item</option>
-                      <option value="App Design">App Design</option>
-                      <option value="App Customization">App Customization</option>
-                      <option value="ABC Template">ABC Template</option>
-                      <option value="App Development">App Development</option>
-                    </select>
+      <label class="form-label" for="multicol-email">الصلاحية</label>
+      <select name="roles" id="roles" class="form-select item-details mb-2">
+        <?php foreach($params["roles"] as $role){?>
+                
+    <option <?php if ($role['id'] === $params['users']->role_id) echo "selected"?> value="<?= $params['users']->role_id ?>"><?=$role['name']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
+      </select>
       </div>
       <div class="col-md-6">
         <div class="form-password-toggle">
           <label class="form-label" for="multicol-password">رقم السر</label>
           <div class="input-group input-group-merge">
-            <input  name="password" type="password" id="multicol-password" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="multicol-password2" />
+            <input  name="password"  value="<?= $params['users']->password ?>" type="password" id="multicol-password" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="multicol-password2" />
             <span class="input-group-text cursor-pointer" id="multicol-password2"><i class="bx bx-hide"></i></span>
           </div>
         </div>
@@ -491,31 +498,31 @@
   
 
   <!-- Core JS -->
-  <!-- build:js assets/vendor/js/core.js -->
-  <script src="assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="assets/vendor/libs/popper/popper.js"></script>
-  <script src="assets/vendor/js/bootstrap.js"></script>
-  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <!-- build:js ../assets/vendor/js/core.js -->
+  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../assets/vendor/js/bootstrap.js"></script>
+  <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
   
-  <script src="assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  <script src="../assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="../assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="../assets/vendor/libs/typeahead-js/typeahead.js"></script>
   
-  <script src="assets/vendor/js/menu.js"></script>
+  <script src="../assets/vendor/js/menu.js"></script>
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="assets/vendor/libs/cleavejs/cleave.js"></script>
-<script src="assets/vendor/libs/cleavejs/cleave-phone.js"></script>
-<script src="assets/vendor/libs/moment/moment.js"></script>
-<script src="assets/vendor/libs/flatpickr/flatpickr.js"></script>
-<script src="assets/vendor/libs/select2/select2.js"></script>
+  <script src="../assets/vendor/libs/cleavejs/cleave.js"></script>
+<script src="../assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+<script src="../assets/vendor/libs/moment/moment.js"></script>
+<script src="../assets/vendor/libs/flatpickr/flatpickr.js"></script>
+<script src="../assets/vendor/libs/select2/select2.js"></script>
 
   <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 
   <!-- Page JS -->
-  <script src="assets/js/form-layouts.js"></script>
+  <script src="../assets/js/form-layouts.js"></script>
   
 </body>
 

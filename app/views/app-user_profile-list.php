@@ -504,7 +504,7 @@
             
             <td><?= $user['user_id'];?></td>
             <td>
-              <img class="img-fluid rounded" height="150px" width="150px" src="images/<?= $user['image'];?>">
+              <img class="img-fluid rounded" height="150px" width="150px" src="../images/<?= $user['image'];?>">
             </td>
             <td><?= $user['address'];?></td>
             <td><?= $user['phone'];?></td>

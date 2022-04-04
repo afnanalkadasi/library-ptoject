@@ -503,7 +503,7 @@
             
             <td><?= $category['name'];?></td>
             <td>
-              <img class="img-fluid rounded" height="150px" width="150px" src="images/<?= $category['image'];?>">
+              <img class="img-fluid rounded" height="150px" width="150px" src="../images/<?= $category['image'];?>">
             </td>
             <td>
             <?php if($category['is_active']==1) {?>    
@@ -518,9 +518,16 @@
                 <i class="tf-icons bx bx-edit-alt me-1"></i>
               </a>
               
-              <button type="button" class="btn btn-icon btn-outline-dribbble">
-                <i class="tf-icons bx bx-trash me-1"></i>
-              </button>
+                <form action="/admin/remove_category/<?=  $category['id']; ?>" method="POST" style="display: inline-block;">
+                              <button type="submit" class="btn btn-icon btn-outline-dribbble">
+                              <?php if($category['is_active']==1) {?>    
+                                  <i class="tf-icons bx bx-trash me-1"></i>
+                              <?php }
+                              else {?>
+                                  <i class="tf-icons bx bx-refresh me-1"></i>
+                              <?php } ?>
+                              </button> 
+                </form>
               
             </td>
           </tr>

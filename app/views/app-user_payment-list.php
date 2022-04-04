@@ -516,10 +516,16 @@
             <a href="/admin/edit_user_payment/<?php echo $user_payment['id'];?>" class="btn btn-icon btn-outline-dribbble">
                 <i class="tf-icons bx bx-edit-alt me-1"></i>
               </a>
-              <button type="button" class="btn btn-icon btn-outline-dribbble">
-                <i class="tf-icons bx bx-trash me-1"></i>
-              </button>
-              
+              <form action="/admin/remove_user_payment/<?=  $user_payment['id']; ?>" method="POST" style="display: inline-block;">
+                            <button type="submit" class="btn btn-icon btn-outline-dribbble">
+                            <?php if($user_payment['is_active']==1) {?>    
+                                <i class="tf-icons bx bx-trash me-1"></i>
+                            <?php }
+                            else {?>
+                                <i class="tf-icons bx bx-refresh me-1"></i>
+                            <?php } ?>
+                            </button> 
+              </form>
             </td>
           </tr>
           <?php } ?>
