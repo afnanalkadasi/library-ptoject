@@ -1,7 +1,7 @@
 <?php
 namespace coding\app\controllers;
 
-
+use coding\app\system\AppSystem;
 use coding\app\Models\Category;
 
 class CategoryController extends Controller{
@@ -43,6 +43,9 @@ class CategoryController extends Controller{
         $category->image=$imageName!=null?$imageName:"default.png";
         $category->created_by=1;
         $category->is_active=$_POST['is_active'];
+        // date_default_timezone_set('Africa/Nairobi');
+        // $category->created_at   = date("d/m/Y H:i:s") ;
+        // $category->upated_at   = date("d/m/Y H:i:s") ;
         return $category;
     }
     
@@ -50,18 +53,19 @@ class CategoryController extends Controller{
         if($_SERVER['REQUEST_METHOD'] === "GET"){
             $cat=new Category();
             $result=$cat->getSingleRow($params['id']);
+            
             $this->view('edit_category',$result);
         }
         elseif($_SERVER['REQUEST_METHOD'] === "POST"){
             $category = $this->getBody();
             $category->update($_POST['id']);
-            $this->redirect('/categories');
+            $this->redirect('/admin/categories');
         }
     }
     public function delete_or_recovery($params=[]){
         $category=new Category();
         $category->remove_or_recovery($params['id']);
-        $this->redirect('/categories');
+        $this->redirect('/admin/categories');
     }
     public function remove(){
 

@@ -114,11 +114,15 @@ class Router{
 
     }
 
+   
     public function view($v,$params){
 
         require_once __DIR__."/../views/$v.php";
 
     }
- 
+    public function redirect($url){
+        header("Location: $url");
+    }
+    
 
 }

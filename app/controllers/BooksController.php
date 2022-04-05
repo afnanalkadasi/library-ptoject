@@ -71,11 +71,53 @@ class BooksController extends Controller{
 
 
     }
-    function update(){
+    public function getBody(){
 
+          $book=new Book();
+
+        $imageName=$this->uploadFile($_FILES['image']);
+        $book->image=$imageName!=null?$imageName:"default.png";       
+        $book->title=$_POST['title'];
+        $book->price=$_POST['price'];
+        $book->description=$_POST['description'];
+        $book->pages_number=$_POST['pages_number'];
+        $book->quantity=$_POST['quantity'];
+        $book->format=$_POST['format'];
+        $book->category_id=$_POST['categories'];
+        $book->author_id=$_POST['authors'];
+        $book->publisher_id=$_POST['publishers'];
+        $book->created_by=1;
+        $book->is_active=$_POST['is_active'];
+
+        return $book;  
     }
-    public function remove(){
+    function update($params=[]){
+        if($_SERVER['REQUEST_METHOD'] === "GET"){
+            $book           = new Book();
+            $selectedBook   = $book->getSingleRow($params['id']);
+            $category       = new Category();
+            $allCategoires  = $category->getAll();
 
+            $auth=new Author();
+            $allauthors=$auth->getAll();
+    
+            $publishers=new Publisher();
+            $allpublishers=$publishers->getAll();
+
+            $data          = array('categories' => $allCategoires, 'book' => $selectedBook,
+            "authors" => $allauthors, "publishers" =>$allpublishers );
+            $this->view('edit_book', $data);
+        }
+        elseif($_SERVER['REQUEST_METHOD'] === "POST"){
+            $book = $this->getBody();
+            $book->update($_POST['id']);
+            $this->redirect('/admin/books');
+        }
+    }
+    public function delete_or_recovery($params=[]){
+        $book=new Book();
+        $book->remove_or_recovery($params['id']);
+        $this->redirect('/admin/books');
     }
 
 

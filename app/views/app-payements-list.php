@@ -503,7 +503,7 @@
             
             <td><?= $payement['name'];?></td>
             <td>
-              <img class="img-fluid rounded" height="150px" width="150px" src="images/<?= $payement['image'];?>">
+              <img class="img-fluid rounded" height="150px" width="150px" src="../images/<?= $payement['image'];?>">
             </td>
             <td>
             <?php if($payement['is_active']==1) {?>    

@@ -512,7 +512,7 @@
             
             <td><?= $book['title'];?></td>
             <td>
-              <img class="img-fluid rounded" height="150px" width="150px" src="images/<?= $book['image'];?>">
+              <img class="img-fluid rounded" height="150px" width="150px" src="../images/<?= $book['image'];?>">
             </td>
             <td><?= $book['price'];?></td>
             
@@ -536,9 +536,16 @@
             <a href="/admin/edit_book/<?php echo $book['id'];?>" class="btn btn-icon btn-outline-dribbble">
                 <i class="tf-icons bx bx-edit-alt me-1"></i>
               </a>
-              <button type="button" class="btn btn-icon btn-outline-dribbble">
-                <i class="tf-icons bx bx-trash me-1"></i>
-              </button>
+              <form action="/admin/remove_book/<?=  $book['id']; ?>" method="POST" style="display: inline-block;">
+                              <button type="submit" class="btn btn-icon btn-outline-dribbble">
+                              <?php if($book['is_active']==1) {?>    
+                                  <i class="tf-icons bx bx-trash me-1"></i>
+                              <?php }
+                              else {?>
+                                  <i class="tf-icons bx bx-refresh me-1"></i>
+                              <?php } ?>
+                              </button> 
+                </form>
               
             </td>
           </tr>

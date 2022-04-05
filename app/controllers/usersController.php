@@ -45,12 +45,42 @@ class UsersController extends Controller{
 
 
     }
-    function update(){
-
+    public function getBody(){
+        $user = new user();  
+        $user->name=$_POST['name'];
+        $user->email=$_POST['email'];
+        $user->password=md5($_POST['password']);
+        $user->is_active=$_POST['is_active'];
+        $user->role_id=$_POST['roles'];
+        
+        $user->is_active=$_POST['is_active'];
+        return $user;
     }
-    public function remove(){
+    
+    function update($params=[]){
+        if($_SERVER['REQUEST_METHOD'] === "GET"){
+            $users=new User();
+            $result=$users->getSingleRow($params['id']);
 
+            $roles = new Role();
+            $allroles = $roles->getAll();
+
+            $data = array('roles' => $allroles, 'users' => $result);
+
+            $this->view('edit_user',$data);
+        }
+        elseif($_SERVER['REQUEST_METHOD'] === "POST"){
+            $user = $this->getBody();
+            $user->update($_POST['id']);
+            $this->redirect('/admin/users');
+        }
     }
+    public function delete_or_recovery($params=[]){
+        $user=new User();
+        $user->remove_or_recovery($params['id']);
+        $this->redirect('/admin/users');
+    }
+  
 
 }
 ?>

@@ -398,26 +398,39 @@
 
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
-  <form class="card-body" action="/save_user" method="POST">
+  <form class="card-body" action="/admin/edit_user_payment" method="POST">
+  <input type="hidden" name="id" value="<?= $params['user_payments']->id ?>">
     <div class="row g-3">
     
       <div class="col-md-6 select2-primary">
         <label class="form-label" for="multicol-language">المستخدم</label>
-        <select id="multicol-language" class="select2 form-select" >
-          <option value="en" selected>English</option>
-          <option value="fr" selected>French</option>
-          <option value="de">German</option>
-          <option value="pt">Portuguese</option>
-        </select>
+        <select name="users" class="form-select item-details mb-2">
+                    <?php
+                foreach($params['users'] as $user){
+                 ?>
+    <option <?php if ($user['id'] === $params['user_payments']->user_id) echo "selected"?> value="<?= $params['user_payments']->user_id ?>"  >
+    <?=$user['name']?></option>
+   
+
+		         	<?php
+ 
+                         }?>
+               
+                    </select>
       </div>
       <div class="col-md-6 select2-primary">
         <label class="form-label" for="multicol-language">الدفع </label>
-        <select id="multicol-language" class="select2 form-select" >
-          <option value="en" selected>English</option>
-          <option value="fr" selected>French</option>
-          <option value="de">German</option>
-          <option value="pt">Portuguese</option>
-        </select>
+        <select name="payements" class="form-select item-details mb-2">
+                    <?php
+                foreach($params['payements'] as $payment){
+                 ?>
+    <option   <?php if ($payment['id'] === $params['user_payments']->payement_id) echo "selected"?> value="<?= $params['user_payments']->payement_id ?>"><?=$payment['name']?></option>
+			       	
+		         	<?php
+ 
+                         }?>
+               
+                    </select>
       </div>
       <div class="col-md-6">
         <div class="form-password-toggle">
@@ -483,37 +496,4 @@
   
 
 
-  
-
-  <!-- Core JS -->
-  <!-- build:js assets/vendor/js/core.js -->
-  <script src="assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="assets/vendor/libs/popper/popper.js"></script>
-  <script src="assets/vendor/js/bootstrap.js"></script>
-  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-  
-  <script src="assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
-  
-  <script src="assets/vendor/js/menu.js"></script>
-  <!-- endbuild -->
-
-  <!-- Vendors JS -->
-  <script src="assets/vendor/libs/cleavejs/cleave.js"></script>
-<script src="assets/vendor/libs/cleavejs/cleave-phone.js"></script>
-<script src="assets/vendor/libs/moment/moment.js"></script>
-<script src="assets/vendor/libs/flatpickr/flatpickr.js"></script>
-<script src="assets/vendor/libs/select2/select2.js"></script>
-
-  <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Page JS -->
-  <script src="assets/js/form-layouts.js"></script>
-  
-</body>
-
-
-<!-- form-layouts-vertical.html , Sat, 26 Mar 2022 16:53:13 GMT -->
-</html>
+  <?php include "js_dash.php"?>

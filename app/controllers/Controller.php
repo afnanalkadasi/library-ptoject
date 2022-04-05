@@ -10,6 +10,8 @@ class Controller{
    function view($viewName,$params=[]){
        AppSystem::$appSystem->router->view($viewName,$params);
    }
-
+   public function redirect($url){
+    AppSystem::$appSystem->router->redirect($url);
+}
 }
 ?>
